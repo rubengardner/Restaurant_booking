@@ -1,0 +1,24 @@
+
+
+
+/*--------------------Header--------------*/
+.logo {
+    background: url("../images/hawaii.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+/*--------------------Header--------------*/
+.poke-image{
+    background: url("../images/poke_bowl.jpg");
+    margin:auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    vertical-align: middle;
+}
