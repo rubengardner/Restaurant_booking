@@ -15,10 +15,17 @@
 
 /*--------------------Header--------------*/
 .poke-image{
-    background: url("../images/poke_bowl.jpg");
-    margin:auto;
     background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100%;
-    vertical-align: middle;
+    width: 100%;
+}
+
+/*--------Container carrousel-------------*/
+.carousel-outter {
+    background-color: blue;
+    height: 490px;
+    width: 95vw;
+    max-width: 650px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
 }
