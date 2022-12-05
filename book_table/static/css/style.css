@@ -29,3 +29,9 @@
     overflow: hidden;
     border-radius: 15px;
 }
+
+
+/*--------Footer-------------*/
+footer {
+    background-color: grey;
+}
