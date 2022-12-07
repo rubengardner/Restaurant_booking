@@ -1,6 +1,17 @@
+/*--------------------Colour--------------*/
 
+.salmon-color {
+    background-color: rgba(254,111,97,0.75);
+    color: white;
+}
 
+.salmon-filter {
+    background-color: rgba(254,111,97,0.15);
+}
 
+.transparent-blue{
+    background-color: rgba(234,238,255, 0.7);
+}
 /*--------------------Header--------------*/
 .logo {
     background: url("../images/hawaii.jpg");
@@ -33,6 +44,27 @@
     margin: auto;
     overflow: hidden;
     border-radius: 15px;
+}
+
+/*--------Menu page-------------*/
+
+.menu-header {
+    background: url("../images/menu_cover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    flood-color: rgba(254,111,97,0.4);
+}
+
+.picture-title {
+    position: absolute;
+    top: 30%;
+    left:10%;
+    padding: 20px;
 }
 
 /*--------Container carrousel menu-------------*/
