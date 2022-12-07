@@ -13,7 +13,12 @@
     -webkit-transition: all .5s ease-in-out;
 }
 
-/*--------------------Header--------------*/
+/*--------------------List--------------*/
+.no-bullet{
+    list-style: none;
+}
+
+/*--------------------Header image--------------*/
 .poke-image{
     background-repeat: no-repeat;
     width: 100%;
@@ -23,13 +28,25 @@
 .carousel-outter {
     background-color: blue;
     height: 490px;
-    width: 95vw;
+    width: 95%;
     max-width: 650px;
     margin: auto;
     overflow: hidden;
     border-radius: 15px;
 }
 
+/*--------Container carrousel menu-------------*/
+.carousel-menu {
+    background-color: blue;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    max-width: 650px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
 
 /*--------Footer-------------*/
 footer {

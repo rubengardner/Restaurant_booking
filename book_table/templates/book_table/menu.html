@@ -1,28 +1,85 @@
 {% extends "book_table/base.html" %}
 
 {% block content %}
-
 <section>
-    <div class="row">
-        <div class="col-md-4">
-            <h2>list of ingredients</h2>
+  <div class="row menu-header">
+    <div class="col">
+      <h2>Menu</h2>
+    </div>
+  </div>
+</section>
+<section class="mt-5">
+    <div class="row m-0">
+        <div class="col-md-4 ">
+            <h2>List of ingredients</h2>
+            <ol class="no-bullet">
+             <a href="#carouselExampleIndicators" data-slide-to="0"> <li> Size </li></a>
+             <a href="#carouselExampleIndicators" data-slide-to="1"> <li> Base </li></a>
+             <a href="#carouselExampleIndicators" data-slide-to="2"> <li> Protein </li></a>
+             <a href="#carouselExampleIndicators" data-slide-to="3"> <li> Toppings </li></a>
+             <a href="#carouselExampleIndicators" data-slide-to="4"> <li> Sauce </li></a>
+            </ol>
         </div>
-        <div class="col-md-8">
-            <div id="carouselExampleIndicators" class="carousel slide carousel-outter" data-ride="carousel">
-                <ol class="carousel-indicators">
+        <div class="col-md-8 ">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-menu" data-ride="carousel">
+                <ol class="carousel-indicators no-bullet">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                 </ol>
-                <div class="carousel-inner">
+                <div class="carousel-inner ">
                   <div class="carousel-item active">
-                    <img class="d-block w-100" src="..." alt="First slide">
+                    <h3>Choose the size</h3>
+                    <ul class="no-bullet">
+                      <li>Small: 20g of protein</li>
+                      <li>Medium: 35g of protein</li>
+                      <li>Large: 50g of protein</li>
+                      <li>Giant: 100g of protein</li>
+                    </ul>
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Second slide">
+                    <h3>Choose the base</h3>
+                    <ul class="no-bullet">
+                      <li>Rice</li>
+                      <li>Quinoa</li>
+                      <li>Lettuce</li>
+                      <li>Kale</li>
+                    </ul>
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Third slide">
+                    <h3>Choose the protein (Max 2)</h3>
+                    <ul class="no-bullet">
+                      <li>Tuna</li>
+                      <li>Tofu</li>
+                      <li>Salmon</li>
+                      <li>Prawn</li>
+                      <li>Chicken</li>
+                      <li>Hard Boiled egg</li>
+                    </ul>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>Choose the Toppings (Max 4)</h3>
+                    <ul class="no-bullet">
+                      <li>Avocado</li>
+                      <li>Mango</li>
+                      <li>Pineaple</li>
+                      <li>Ginger</li>
+                      <li>Cucumber</li>
+                      <li>Nori seaweed</li>
+                      <li>Red onion</li>
+                      <li>Betroot</li>
+                    </ul>
+                  </div>
+                  <div class="carousel-item">
+                    <h3>Choose the Sauce</h3>
+                    <ul class="no-bullet">
+                      <li>Soy</li>
+                      <li>Honey and mustard</li>
+                      <li>Sweet chili</li>
+                      <li>Teriyaki</li>
+                    </ul>
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -36,6 +93,26 @@
               </div>
         </div>
     </div>
+</section>
+
+<section class="mt-5">
+  <div class="row m-0">
+    <div class="col-md-2"></div>
+    <div class="col-12 col-md-8">
+      <div class="jumbotron">
+        <h3 class="text-center">Allergens & food information</h3>
+          <ul>
+            <li><i class="fa-solid fa-wheat-awn"></i> Gluten </li>
+            <li><i class="fa-solid fa-shrimp"></i> Crustacean</li>
+            <li><i class="fa-solid fa-cheese"></i> Dairy</li>
+            <li><i class="fa-solid fa-seedling"></i> Vegan</li>
+            <li><i class="fa-solid fa-fish"></i> Fish</li>
+            <li><i class="fa-solid fa-egg"></i> Egg </li>
+
+          </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 {%endblock%}
