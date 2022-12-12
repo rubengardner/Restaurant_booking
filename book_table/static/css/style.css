@@ -1,17 +1,32 @@
 /*--------------------Colour--------------*/
 
 .salmon-color {
-    background-color: rgba(254,111,97,0.75);
-    color: white;
+    background-color: rgba(254,111,97,0.95);
 }
 
 .salmon-filter {
     background-color: rgba(254,111,97,0.15);
 }
 
+.dark-blue {
+    background-color: rgba(66,86,122, 0.8)
+}
+
 .transparent-blue{
     background-color: rgba(234,238,255, 0.7);
 }
+
+.white-text {
+    color: white;
+}
+/*--------------------Links--------------*/
+
+.no-bullet a:link{
+    text-decoration: none;
+    color: white;
+}
+
+
 /*--------------------Header--------------*/
 .logo {
     background: url("../images/hawaii.jpg");
@@ -37,9 +52,8 @@
 
 /*--------Container carrousel-------------*/
 .carousel-outter {
-    background-color: blue;
     height: 490px;
-    width: 95%;
+    width: 90%;
     max-width: 650px;
     margin: auto;
     overflow: hidden;
@@ -54,10 +68,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 500px;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    flood-color: rgba(254,111,97,0.4);
 }
 
 .picture-title {
@@ -67,20 +77,62 @@
     padding: 20px;
 }
 
-/*--------Container carrousel menu-------------*/
-.carousel-menu {
-    background-color: blue;
-    height: 300px;
-    padding: 0;
-    margin: 0;
-    width: 80%;
-    max-width: 650px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 15px;
+#make-your-poke{
+    background: url("../images/poke-dark.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
 }
+
+.carousel-menu {
+    height: 270px;
+    padding: 5px;
+    margin: 50px auto 0;
+    width: 85%;
+    max-width: 650px;
+    color: black;
+}
+
+.carousel-text{
+    width: 90%;
+}
+
+.list-item {
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.list-top {
+    border-top: 1px solid black;
+}
+
+.list-item:hover{
+    background-color: rgba(254,111,97,0.15);
+}
+
+.carousel-position {
+    width: 60%;
+    margin: auto;
+}
+
 
 /*--------Footer-------------*/
 footer {
     background-color: grey;
+}
+
+/*--------Media queires-------------*/
+
+/*--------Menu-------------*/
+@media screen and (max-width: 576px) {
+
+    .carousel-menu {
+        height: 300px;
+
+    }
+
+    .carousel-position {
+        width: 90%;
+    }
 }

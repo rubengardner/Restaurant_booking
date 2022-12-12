@@ -2,7 +2,7 @@
 
 {% block content %}
 <section>
-  <div class="row menu-header">
+  <div class="row menu-header m-0 no-gutters">
     <div class="col salmon-filter">
       <div class="picture-title salmon-color">
         <h1>Pokedream menu</h1>
@@ -11,20 +11,40 @@
     </div>
   </div>
 </section>
-<section class="mt-5">
-    <div class="row m-0">
-        <div class="col-md-4 ">
-            <h2>List of ingredients</h2>
-            <ol class="no-bullet">
-             <a href="#carouselExampleIndicators" data-slide-to="0"> <li> Size </li></a>
-             <a href="#carouselExampleIndicators" data-slide-to="1"> <li> Base </li></a>
-             <a href="#carouselExampleIndicators" data-slide-to="2"> <li> Protein </li></a>
-             <a href="#carouselExampleIndicators" data-slide-to="3"> <li> Toppings </li></a>
-             <a href="#carouselExampleIndicators" data-slide-to="4"> <li> Sauce </li></a>
-            </ol>
-        </div>
-        <div class="col-md-8">
-            <div id="carouselExampleIndicators" class="carousel slide carousel-menu" data-ride="carousel">
+<section id="made-poke">
+<div class="row">
+  <div class="col-md-6">
+    <h4>Honolulu</h4>
+    <p>Rice, doble salmon, avocado, wakame seaweed, ginger, spicy mayo</p>
+
+    <h4>Waikiki</h4>
+    <p>Kale, salmon, prawns, cucumber, edamame, pineapple, sweet chilly</p>
+  
+    <h4>Maui</h4>
+    <p> Quinoa, chicken, eggs, mango, carrots, pumpkin seeds, honey and mustard</p>
+  
+  </div>
+  <div class="col-md-6">
+    <h4>Vegan power</h4>
+    <p>Lettuce, double heura, avocado, mango, pineaple, ginger, spicy mayo</p>
+  
+    <h4>Spicy Tuna</h4>
+    <p>Rice, double tuna, ginger, carrots, edamame, pumpkin seeds, spicy mayo</p>
+  
+    <h4>Creamy chicken</h4>
+    <p>Quinoa, double chicken, avocado, mango, betroot, honey and mustard</p>
+  </div>
+</div>
+</section>
+<section id='make-your-poke' class="pt-5 pb-5 dark-brown">
+  <div class="row no-gutters">
+    <div class="col">
+      <h2 class="text-center"><span class="dark-blue p-3 white-text"> Poke in 5 simple steps:</span></h2>
+    </div>
+  </div>
+    <div class="row no-gutters">
+        <div class="col pt-5">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-menu salmon-color" data-ride="carousel">
                 <ol class="carousel-indicators no-bullet">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -32,57 +52,65 @@
                   <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                 </ol>
-                <div class="carousel-inner ">
+                <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <h3>Choose the size</h3>
-                    <ul class="no-bullet">
-                      <li>Small: 20g of protein</li>
-                      <li>Medium: 35g of protein</li>
-                      <li>Large: 50g of protein</li>
-                      <li>Giant: 100g of protein</li>
+                    <h4 class="text-center pb-3">Size</h4>
+                    <div class="carousel-position">
+                    <ul>
+                      <li><b>Small:</b> 20g of protein, 400 ml bowl</li>
+                      <li><b>Medium:</b> 35g of protein, 500 ml bowl</li>
+                      <li><b>Large:</b> 50g of protein, 600 ml bowl</li>
+                      <li><b>Giant:</b> 100g of protein, 700 ml bowl</li>
                     </ul>
                   </div>
-                  <div class="carousel-item">
-                    <h3>Choose the base</h3>
-                    <ul class="no-bullet">
-                      <li>Rice</li>
-                      <li>Quinoa</li>
-                      <li>Lettuce</li>
-                      <li>Kale</li>
+                </div>
+                  <div class="carousel-item ">
+                    <h4 class="text-center pb-3">Base</h4>
+                    <div class="carousel-position">
+                    <ul>
+                      <li><b>Rice:</b> cooked the sushi way</li>
+                      <li><b>Quinoa:</b> Mix of white and red quinoa</li>
+                      <li><b>Barley:</b> Stronger presence in the bowl <i class="fa-solid fa-wheat-awn"></i></li>
+                      <li><b>Kale:</b> Recharge your folic acid reserves</li>
+                      <li><b>Lettuce:</b> erfect for a lighter meal</li>
                     </ul>
                   </div>
-                  <div class="carousel-item">
-                    <h3>Choose the protein (Max 2)</h3>
-                    <ul class="no-bullet">
-                      <li>Tuna</li>
-                      <li>Tofu</li>
-                      <li>Salmon</li>
-                      <li>Prawn</li>
-                      <li>Chicken</li>
-                      <li>Hard Boiled egg</li>
-                    </ul>
                   </div>
                   <div class="carousel-item">
-                    <h3>Choose the Toppings (Max 4)</h3>
-                    <ul class="no-bullet">
-                      <li>Avocado</li>
-                      <li>Mango</li>
-                      <li>Pineaple</li>
-                      <li>Ginger</li>
-                      <li>Cucumber</li>
-                      <li>Nori seaweed</li>
-                      <li>Red onion</li>
-                      <li>Betroot</li>
+                    <h4 class="text-center pb-3"> Protein (Max 2)</h4>
+                    <div class="carousel-position">
+                    <ul>
+                      <li><b>Tuna:</b> Smoked <i class="fa-solid fa-fish"></i></li>
+                      <li><b>Tofu:</b> Firm consistency <i class="fa-solid fa-wheat-awn"></i></li>
+                      <li><b>Salmon:</b> Raw salmon <i class="fa-solid fa-fish"></i></li>
+                      <li><b>Prawn:</b> Boiled <i class="fa-solid fa-shrimp"></i></li>
+                      <li><b>Chicken:</b> Free range </li>
+                      <li><b>Hard Boiled egg:</b> Free range <i class="fa-solid fa-egg"></i></li>
                     </ul>
+                    </div>
                   </div>
                   <div class="carousel-item">
-                    <h3>Choose the Sauce</h3>
-                    <ul class="no-bullet">
-                      <li>Soy</li>
-                      <li>Honey and mustard</li>
-                      <li>Sweet chili</li>
-                      <li>Teriyaki</li>
+                    <h4 class="text-center pb-3">Toppings (Max 4)</h4>
+                    <div class="carousel-position">
+                    <ul>
+                      <li><b>Fruit:</b> Mango, Pineapple, Avocado, Banana</li>
+                      <li><b>Vegetable:</b> Cucumber, Tomatoes, Carrots, Betroots</li>
+                      <li><b>Nuts & Seeds:</b> Peanuts, Pumpkin seeds, Edamame</li>
+                      <li><b>Other:</b> Nori seaweed, Sauerkraut, Ginger</li>
                     </ul>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <h4 class="text-center pb-3">Sauce</h4>
+                    <div class="carousel-position">
+                    <ul>
+                      <li><b>Soy:</b> Classic sauce, good with fish<i class="fa-solid fa-wheat-awn"></i></li>
+                      <li><b>Honey and mustard:</b> Sweet and powerful</li>
+                      <li><b>Sweet chili:</b> A bit spicy</li>
+                      <li><b>Teriyaki</b> Powerful taste <i class="fa-solid fa-shrimp"></i></li>
+                      <li><b>Spicy mayo</b> Creamy and spicy <i class="fa-solid fa-egg"></i></i></li>
+                    </ul>
+                    </div>
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -99,7 +127,7 @@
 </section>
 
 <section class="mt-5">
-  <div class="row m-0">
+  <div class="row no-gutters m-0">
     <div class="col-md-2"></div>
     <div class="col-12 col-md-8">
       <div class="jumbotron">
