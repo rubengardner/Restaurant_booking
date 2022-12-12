@@ -77,6 +77,16 @@
     padding: 20px;
 }
 
+#made-poke {
+    margin: 50px 0 50px 0;
+}
+
+.made-choice{
+    width: 70%;
+    margin:auto;
+    padding: 15px;
+}
+
 #make-your-poke{
     background: url("../images/poke-dark.jpg");
     background-position: center;
