@@ -16,7 +16,7 @@
 
 <div class="row no-gutters">
   <div class="col">
-    <p class="text-center">Small - 8€ / Medium - 10€ / Large - 12€ / Giant - 15€</p>
+    <p class="text-center price">Small - 8€ / Medium - 10€ / Large - 12€ / Giant - 15€</p>
   </div>
 </div>
 <div class="row no-gutters">
@@ -51,14 +51,11 @@
 </div>
 </section>
 <section id='make-your-poke' class="pt-5 pb-5 dark-brown">
-  <div class="row no-gutters">
-    <div class="col">
-      <h2 class="text-center"><span class="dark-blue p-3 white-text"> Poke in 5 simple steps:</span></h2>
-    </div>
-  </div>
     <div class="row no-gutters">
         <div class="col pt-5">
+          
             <div id="carouselExampleIndicators" class="carousel slide carousel-menu salmon-color" data-ride="carousel">
+              <h3 class="text-center pb-4 pt-2">Make your own poke:</h3>
                 <ol class="carousel-indicators no-bullet">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -140,24 +137,19 @@
     </div>
 </section>
 
-<section class="mt-5">
+<section class="allergen cream-colour p-5">
+  <h2 class="text-center">Allergens</h2>
   <div class="row no-gutters m-0">
-    <div class="col-md-2"></div>
-    <div class="col-12 col-md-8">
-      <div class="jumbotron">
-        <h3 class="text-center">Allergens & food information</h3>
-          <ul>
-            <li><i class="fa-solid fa-wheat-awn"></i> Gluten </li>
-            <li><i class="fa-solid fa-shrimp"></i> Crustacean</li>
-            <li><i class="fa-solid fa-cheese"></i> Dairy</li>
-            <li><i class="fa-solid fa-seedling"></i> Vegan</li>
-            <li><i class="fa-solid fa-fish"></i> Fish</li>
-            <li><i class="fa-solid fa-egg"></i> Egg </li>
-
-          </ul>
-      </div>
+    <div class="col-md-6">
+        <p class="text-center allergen-size"><i class="fa-solid fa-seedling "></i> Vegan</p>
+        <p class="text-center allergen-size"><i class="fa-solid fa-fish"></i> Fish</p>
+        <p class="text-center allergen-size"><i class="fa-solid fa-egg"></i> Egg </p>
     </div>
-  </div>
+    <div class="col-md-6">
+        <p class="text-center allergen-size"><i class="fa-solid fa-wheat-awn"></i> Gluten </p>
+        <p class="text-center allergen-size"><i class="fa-solid fa-shrimp"></i> Crustacean</p>
+        <p class="text-center allergen-size"><i class="fa-solid fa-cheese"></i> Dairy</p>
+    </div>
 </section>
 
 {%endblock%}

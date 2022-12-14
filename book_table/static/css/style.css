@@ -1,3 +1,5 @@
+/*------------------All pages--------------*/
+
 /*--------------------Colour--------------*/
 
 .salmon-color {
@@ -8,8 +10,8 @@
     background-color: rgba(254,111,97,0.15);
 }
 
-.dark-blue {
-    background-color: rgba(66,86,122, 0.8)
+.dark-grey {
+    background-color: rgb(52,58,64);
 }
 
 .transparent-blue{
@@ -17,17 +19,19 @@
 }
 
 .cream-colour {
-    background-color: rgb(255,240,201);
+    background-color: rgba(255,240,201,0.5);
+}
+
+.salmon-text {
+    color: rgba(254,111,97,0.95);
 }
 
 .white-text {
     color: white;
 }
-/*--------------------Links--------------*/
 
-.no-bullet a:link{
-    text-decoration: none;
-    color: white;
+.dark-text {
+    color: rgb(52,58,64);
 }
 
 
@@ -83,6 +87,7 @@
 
 #made-poke {
     padding: 50px 0 50px 0;
+    transform: scale(0.95,0.95);
 }
 
 .made-choice{
@@ -96,16 +101,24 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transform: scale(0.95,0.95);
     height: 700px;
 }
 
+
 .carousel-menu {
-    height: 270px;
+    height: 370px;
     padding: 5px;
     margin: 50px auto 0;
-    width: 85%;
+    width: 90%;
     max-width: 650px;
     color: black;
+    font-size: 15pt;
+}
+
+.price {
+    width: 70%;
+    margin: auto;
 }
 
 .carousel-text{
@@ -126,14 +139,17 @@
 }
 
 .carousel-position {
-    width: 60%;
+    width: 80%;
     margin: auto;
 }
 
+/*--------Allergen section-------------*/
 
-/*--------Footer-------------*/
-footer {
-    background-color: grey;
+.allergen {
+    transform: scale(0.95,0.95);
+}
+.allergen-size {
+    font-size: 30px;
 }
 
 /*--------Media queires-------------*/
@@ -142,11 +158,11 @@ footer {
 @media screen and (max-width: 576px) {
 
     .carousel-menu {
-        height: 300px;
-
+        height: 425px;
+        width: 90%;
     }
 
     .carousel-position {
-        width: 90%;
+        width: 95%;
     }
 }
