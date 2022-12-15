@@ -19,7 +19,7 @@
 }
 
 .cream-colour {
-    background-color: rgba(255,240,201,0.5);
+    background-color: rgba(255,240,201,1);
 }
 
 .salmon-text {
@@ -35,25 +35,28 @@
 }
 
 
-/*--------------------Header--------------*/
-.logo {
-    background: url("../images/hawaii.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 500px;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-}
+
 
 /*--------------------List--------------*/
 .no-bullet{
     list-style: none;
 }
 
-/*--------------------Header image--------------*/
-.poke-image{
+/*--------------------Index page--------------*/
+
+.logo {
+    background: url("../images/poke-dark-4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 550px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    
+}
+
+.poke-image {
     background-repeat: no-repeat;
     width: 100%;
 }
