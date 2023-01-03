@@ -3,8 +3,8 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def index_view(request):
-    return render(request, 'book_table/index.html')
+    return render(request, 'index.html')
 
 
 def menu_view(request):
-    return render(request, 'book_table/menu.html')
+    return render(request, 'menu.html')
