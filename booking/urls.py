@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index_view, name='index'),
     path('menu', views.menu_view, name='menu'),
+    path('booking', views.add_reservation, name='booking'),
     path('accounts/', include('allauth.urls')),
 ]

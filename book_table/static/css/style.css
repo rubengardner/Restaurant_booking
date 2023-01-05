@@ -173,6 +173,14 @@
     font-size: 30px;
 }
 
+/*--------Booking menu-------------*/
+.booking-form{
+    width:50%;
+    left:25%;
+    position: absolute;
+}
+
+
 /*--------Media queires-------------*/
 
 /*--------Menu-------------*/
