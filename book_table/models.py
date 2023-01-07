@@ -26,4 +26,4 @@ class Reservation(models.Model):
         unique_together = ["table", "date", "time"]
 
     def __str__(self):
-        return f'Reservation: Customer {self.client}'
+        return f'{self.date}'

@@ -180,6 +180,9 @@
     position: absolute;
 }
 
+.reservation-info{
+    display:none;
+}
 
 /*--------Media queires-------------*/
 

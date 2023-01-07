@@ -7,6 +7,6 @@ class ReservationForm(forms.ModelForm):
         fields = ['table', 'date', 'time']
         exclude = ["user"]
         widgets = {
-            'date': forms.widgets.DateInput(attrs={'type': 'date'}),
-            
+            'date': forms.widgets.DateInput(attrs={'type': 'date'})
         }
+        
