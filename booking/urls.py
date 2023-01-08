@@ -23,4 +23,7 @@ urlpatterns = [
     path('menu', views.menu_view, name='menu'),
     path('booking', views.add_reservation, name='booking'),
     path('accounts/', include('allauth.urls')),
+    path('mybookings', views.mybooking_view, name='mybookings'),
+    path('edit_booking/<reservation_id>', views.edit_booking, name='edit_booking'),
+    
 ]

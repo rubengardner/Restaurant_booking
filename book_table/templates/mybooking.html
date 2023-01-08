@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col mt-5 ">
+        <div class="jumbotron">
+          {% include 'messages.html' %}
+
+
+          {% for reservation in reservations%}
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Reservation 
+                    <i class="fas fa-caret-down"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  <p>Date: {{reservation.date}} | Time: {{reservation.time}} | Number of people: {{reservation.table.number_of_seats}} </p>
+                  <a href="/edit_booking/{{ reservation.id }}" class="btn btn-secondary">Edit</a> 
+                  <a href="/edit/{{ item.id }}" class="btn btn-danger">Delete</a> 
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+        
+          
+        </div>
+     
+  </div>
+    </div>
+</div>
+</div>
+
+
+
+
+  
+{%endblock%}

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse, get_list_or_404
+from django.shortcuts import render, redirect, HttpResponse, get_list_or_404, get_object_or_404
 from .models import Reservation
 from .forms import ReservationForm
 from django.contrib import messages
@@ -15,9 +15,6 @@ def menu_view(request):
 
 
 def add_reservation(request):
-
-    
-
 
     if request.method == 'POST':
         form = ReservationForm(request.POST) 
@@ -42,3 +39,30 @@ def add_reservation(request):
         'reservations': reservations,
     }
     return render(request, 'table_booking.html', context)
+
+def mybooking_view(request):
+    try:
+        reservations = get_list_or_404(Reservation, client = request.user)
+    except:
+        reservations = None
+    
+    form = ReservationForm()
+    context = {
+        'reservations': reservations,
+    }
+    return render(request, 'mybooking.html', context)
+
+def edit_booking(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    if request.method == 'POST':
+        form = ReservationForm(request.POST, instance = reservation)
+        if form.is_valid():
+            form.save()
+        return redirect('mybooking_view')
+
+    form = ReservationForm(instance=reservation)
+    context = {
+        'form': form
+    }
+    return render(request, 'edit_booking.html', context)
+
