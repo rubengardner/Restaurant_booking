@@ -2,65 +2,65 @@
 
 {% block content %}
 
-
+{% include 'messages.html' %}
 <div class="container">
   <div class="row">
     <div class="col mt-5 ">
-        <div class="jumbotron">
-          {% include 'messages.html' %}
+      <div class="jumbotron">
+        {% include 'messages.html' %}
 
-          
-          <h3 class="display-4">Edit your booking</h3>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Make your reservation</h5>
-                  <p class="card-text">
-                    <form class='mt-5' method='post'>
-                      {% csrf_token %}
-                      {{ form.as_p }}
-                          <div>
-                              <p>
-                                  <button type="submit" class="btn btn-dark">Edit booking</button>
-                              </p>
-                          </div>
+
+        <h3 class="display-4">Edit your booking</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Make your reservation</h5>
+                <p class="card-text">
+                  <form class='mt-5' method='post'>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div>
+                      <p>
+                        <button type="submit" class="btn btn-dark">Edit booking</button>
+                      </p>
+                    </div>
                   </form>
-                  </p>
-                </div>
+                </p>
               </div>
             </div>
-            <div class="col-md-6">
+          </div>
+          <div class="col-md-6">
 
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 id='card-title-id' class="card-title">List of booked tables on:</h5>
-                  <h6 id="date-selection" class="card-subtitle mb-2 text-muted">Select a date</h6>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 id='card-title-id' class="card-title">List of booked tables on:</h5>
+                <h6 id="date-selection" class="card-subtitle mb-2 text-muted">Select a date</h6>
                 {% if bookings %}
                 {% for x in bookings %}
                 <p data-type="{{x.date|date:'Y-m-d'}}" class="card-text list-group-item reservation-info">
                   Time: {{x.time}} Table nº {{x.table_id}}
                 </p>
-                
-                  
-                  
+
+
+
                 {% endfor %}
                 {% else %}
                 <p class="card-text">All tables are free!</p>
-        
+
                 {% endif %}
+              </div>
             </div>
+
           </div>
-          
+
         </div>
-     
-  </div>
+      </div>
     </div>
-</div>
-</div>
+  </div>
 </div>
 
 
 
-  
+
 {%endblock%}

@@ -23,7 +23,7 @@ def add_reservation(request):
             reserv = form.save(commit=False)
             reserv.client = request.user
             reserv.save()
-            messages.success(request, 'Reservation request submitted successfully.')
+            messages.success(request, 'Reservation request submitted succesfully.')
         else:
             messages.error(request, 'The table is already booked.')
             reserv = form.instance.date
@@ -66,6 +66,7 @@ def edit_booking(request, reservation_id):
         form = ReservationForm(request.POST, instance = reservation)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Reservation edited succesfully.')
         return redirect('mybookings')
 
     form = ReservationForm(instance=reservation)
@@ -79,4 +80,5 @@ def edit_booking(request, reservation_id):
 def delete_booking(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id)
     reservation.delete()
+    messages.success(request, 'Reservation delete succesfully.')
     return redirect('mybookings')
