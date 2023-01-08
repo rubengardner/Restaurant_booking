@@ -40,29 +40,43 @@ def add_reservation(request):
     }
     return render(request, 'table_booking.html', context)
 
+
 def mybooking_view(request):
     try:
         reservations = get_list_or_404(Reservation, client = request.user)
     except:
         reservations = None
-    
+
     form = ReservationForm()
     context = {
         'reservations': reservations,
     }
     return render(request, 'mybooking.html', context)
 
+
 def edit_booking(request, reservation_id):
+
+    try:
+        bookings = get_list_or_404(Reservation)
+    except:
+        bookings = None
+
     reservation = get_object_or_404(Reservation, id=reservation_id)
     if request.method == 'POST':
         form = ReservationForm(request.POST, instance = reservation)
         if form.is_valid():
             form.save()
-        return redirect('mybooking_view')
+        return redirect('mybookings')
 
     form = ReservationForm(instance=reservation)
     context = {
-        'form': form
+        'form': form,
+        'bookings': bookings,
     }
     return render(request, 'edit_booking.html', context)
 
+
+def delete_booking(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    reservation.delete()
+    return redirect('mybookings')
