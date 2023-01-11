@@ -7,9 +7,6 @@
   <div class="row">
     <div class="col mt-5 ">
       <div class="jumbotron">
-        {% include 'messages.html' %}
-
-
         {% for reservation in reservations%}
         <div class="accordion" id="accordionExample">
           <div class="card">
@@ -57,16 +54,10 @@
               </div>
             </div>
           </div>
+        </div>
           {% empty %}
           <p>No reservations</p>
           {% endfor %}
-
-
-
-
-
-        </div>
-
       </div>
     </div>
   </div>

@@ -1,5 +1,12 @@
 /*------------------All pages--------------*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+body{
+    font-family: 'Raleway', sans-serif;
+}
+p {
+    font-size: 14pt;
+}
 /*--------------------Colour--------------*/
 
 .salmon-color {
@@ -20,6 +27,10 @@
 
 .cream-colour {
     background-color: rgba(255,240,201,1);
+}
+
+.dark-brown{
+    background-color: rgba(115,68,59,0.95);
 }
 
 .cream-filter {
@@ -53,7 +64,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 550px;
+    min-height: 700px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
@@ -72,7 +83,9 @@
 
 .info-carousel {
     height: 700px;
+    transform: scale(0.95,0.95);
 }
+
 /*--------Container carrousel-------------*/
 .carousel-outter {
     height: 350px;
@@ -82,6 +95,8 @@
     margin: auto;
     overflow: hidden;
     border-radius: 15px;
+
+    
 }
 
 .carousel-postion-1 {
@@ -92,7 +107,7 @@
 /*--------Menu page-------------*/
 
 .menu-header {
-    background: url("../images/menu_cover.jpg");
+    background: url("../images/knife-salmon.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,7 +118,7 @@
     position: absolute;
     top: 30%;
     left:10%;
-    padding: 20px;
+    padding: 50px;
 }
 
 #made-poke {
@@ -122,7 +137,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transform: scale(0.95,0.95);
     height: 700px;
 }
 
@@ -146,19 +160,6 @@
     width: 90%;
 }
 
-.list-item {
-    padding: 10px 0 10px 0;
-    border-bottom: 1px solid black;
-}
-
-.list-top {
-    border-top: 1px solid black;
-}
-
-.list-item:hover{
-    background-color: rgba(254,111,97,0.15);
-}
-
 .carousel-position {
     width: 80%;
     margin: auto;
@@ -168,9 +169,11 @@
 
 .allergen {
     transform: scale(0.95,0.95);
+    min-height: 500px;
 }
+
 .allergen-size {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 /*--------Booking menu-------------*/
