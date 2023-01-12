@@ -28,17 +28,23 @@
       <div class="carousel-item active">
         <h3><i class="fa-solid fa-carrot"></i> Check out our menu</h3>
         <p>From vegan to ketogenic, we can satisfy all types of diet</p>
-        <button type="button" class="btn btn-light">Menu</button>
+        <a class="btn btn-light" href="{% url 'menu' %}">Menu</a>
       </div>
       <div class="carousel-item">
+        {% if user.is_authenticated %}
         <h3><i class="fa-solid fa-utensils"></i> Make a reservation</h3>
         <p>Book a table with us, come and enjoy our delicious bowls</p>
-        <button type="button" class="btn btn-light"> Book a table</button>
+        <a class="btn btn-light" href="{% url 'booking' %}">Book a table </a>
+        {% else %}
+        <h3><i class="fa-solid fa-utensils"></i> Make a reservation</h3>
+        <p>Sign up and book a table with us</p>
+        <a class="btn btn-light" href="{% url 'account_signup' %}">Sign in </a>
+        {% endif %}
       </div>
       <div class="carousel-item">
         <h3><i class="fa-solid fa-address-book"></i> Contact information </h3>
         <p>What to contact us? All our info here!</p>
-        <button type="button" class="btn btn-light">Contact</button>
+        <a class="btn btn-light" href="{% url 'contact' %}">Contact</a>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

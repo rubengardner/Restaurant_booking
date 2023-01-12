@@ -1,8 +1,8 @@
 /*------------------All pages--------------*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
 
 body{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 p {
     font-size: 14pt;
@@ -115,7 +115,7 @@ p {
 /*--------Menu page-------------*/
 
 .menu-header {
-    background: url("../images/knife-salmon.jpg");
+    background: url("../images/salmon-knife.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,7 +126,7 @@ p {
     position: absolute;
     top: 30%;
     left:10%;
-    padding: 50px;
+    padding: 40px;
 }
 
 #made-poke {
@@ -219,5 +219,10 @@ p {
 
     .carousel-position {
         width: 95%;
+    }
+
+    .picture-title {
+        padding: 20px;
+        width:80%;
     }
 }
