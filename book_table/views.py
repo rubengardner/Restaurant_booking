@@ -14,6 +14,10 @@ def menu_view(request):
     return render(request, 'menu.html')
 
 
+def contact_view(request):
+    return render(request, 'contact.html')
+
+
 def add_reservation(request):
 
     if request.method == 'POST':

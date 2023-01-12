@@ -7,6 +7,14 @@ body{
 p {
     font-size: 14pt;
 }
+
+.vertical-center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 /*--------------------Colour--------------*/
 
 .salmon-color {
@@ -187,6 +195,18 @@ p {
     display:none;
 }
 
+/*--------Contact page-------------*/
+.sunset{
+    background: url("../images/tree.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.contact-section li {
+    font-size: 20pt;
+}
 /*--------Media queires-------------*/
 
 /*--------Menu-------------*/
