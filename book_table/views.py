@@ -7,15 +7,15 @@ from datetime import date
 
 # Create your views here.
 def index_view(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'nbar': 'home'})
 
 
 def menu_view(request):
-    return render(request, 'menu.html')
+    return render(request, 'menu.html', {'nbar': 'menu'})
 
 
 def contact_view(request):
-    return render(request, 'contact.html')
+    return render(request, 'contact.html', {'nbar': 'contact'})
 
 
 def add_reservation(request):
@@ -41,6 +41,7 @@ def add_reservation(request):
     context = {
         'form': form,
         'reservations': reservations,
+        'nbar': 'add'
     }
     return render(request, 'table_booking.html', context)
 
@@ -54,6 +55,7 @@ def mybooking_view(request):
     form = ReservationForm()
     context = {
         'reservations': reservations,
+        'nbar': 'mybookings'
     }
     return render(request, 'mybooking.html', context)
 
@@ -77,6 +79,7 @@ def edit_booking(request, reservation_id):
     context = {
         'form': form,
         'bookings': bookings,
+        'nbar': 'mybookings'
     }
     return render(request, 'edit_booking.html', context)
 
