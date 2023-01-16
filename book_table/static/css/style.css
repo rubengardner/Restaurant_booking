@@ -3,10 +3,14 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: rgba(255,240,201,1);
+    
 }
+
 p {
     font-size: 14pt;
 }
+
 
 .vertical-center{
     margin: 0;
@@ -14,11 +18,23 @@ p {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    
+}
+
+.no-booking{
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 /*--------------------Colour--------------*/
 
 .salmon-color {
-    background-color: rgba(254,111,97,0.95);
+    background-color: rgba(254,111,97,0.2);
 }
 
 .salmon-filter {
@@ -42,7 +58,11 @@ p {
 }
 
 .cream-filter {
-    background-color: rgba(255,240,201,0.5);
+    background-color: #fff0c9;
+}
+
+.white-background{
+    background-color: white;
 }
 
 .salmon-text {
@@ -91,7 +111,6 @@ p {
 
 .info-carousel {
     height: 700px;
-    transform: scale(0.95,0.95);
 }
 
 /*--------Container carrousel-------------*/
@@ -131,7 +150,6 @@ p {
 
 #made-poke {
     padding: 50px 0 50px 0;
-    transform: scale(0.95,0.95);
 }
 
 .made-choice{
@@ -176,7 +194,6 @@ p {
 /*--------Allergen section-------------*/
 
 .allergen {
-    transform: scale(0.95,0.95);
     min-height: 500px;
 }
 
@@ -195,18 +212,33 @@ p {
     display:none;
 }
 
-/*--------Contact page-------------*/
-.sunset{
-    background: url("../images/tree.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
+.card-height{
+    height: 350px;
 }
 
+/*--------Contact page-------------*/
+
 .contact-section li {
-    font-size: 20pt;
+    font-size: 15pt;
 }
+
+
+/*--------Footer-------------*/
+.footer-link{
+    font-size: 20pt;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link i {
+    color:#b1dfd7;
+  }
+
+/*--------Jumbotrons-------------*/
+.jumbo-height{
+    min-height: 500px;
+}
+
 /*--------Media queires-------------*/
 
 /*--------Menu-------------*/

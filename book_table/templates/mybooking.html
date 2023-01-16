@@ -2,11 +2,11 @@
 
 {% block content %}
 
-
+<section>
 <div class="container">
   <div class="row">
     <div class="col mt-5 ">
-      <div class="jumbotron">
+      <div class="jumbotron jumbo-height">
         {% for reservation in reservations%}
         <div class="accordion" id="accordionExample">
           <div class="card">
@@ -56,16 +56,16 @@
           </div>
         </div>
           {% empty %}
-          <p>No reservations</p>
+          <div class="row ">
+            <div class="col text-center no-booking">
+              <h2>No bookings</h2>
+              <p class="pt-3 pb-3">Want to book a table?</p>
+              <a class="btn btn-light mb-3" href="{% url 'booking' %}">Booking</a>
+          </div>
           {% endfor %}
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
+</section>
 {%endblock%}
