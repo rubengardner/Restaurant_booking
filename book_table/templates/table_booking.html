@@ -3,56 +3,56 @@
 {% block content %}
 
 <section>
-<div class="container">
-  <div class="row">
-    <div class="col mt-5 ">
-      <div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col mt-5 ">
+        <div class="jumbotron">
 
-        <h3 class="display-4">Book a table</h3>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body card-height">
-                <h5 class="card-title">Make your reservation</h5>
-                <p class="card-text ">
-                  <form class='mt-5' method='post' action="booking">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <div>
-                      <p>
-                        <button type="submit" class="btn btn-dark">Add reservation</button>
-                      </p>
-                    </div>
-                  </form>
-                </p>
+          <h3 class="display-4">Book a table</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body card-height">
+                  <h5 class="card-title">Make your reservation</h5>
+                  <p class="card-text ">
+                    <form class='mt-5' method='post' action="booking">
+                      {% csrf_token %}
+                      {{ form.as_p }}
+                      <div>
+                        <p>
+                          <button type="submit" class="btn btn-dark">Add reservation</button>
+                        </p>
+                      </div>
+                    </form>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body card-height">
+                  <h5 id='card-title-id' class="card-title">List of booked tables on:</h5>
+                  <h6 id="date-selection" class="card-subtitle mb-2 text-muted">Select a date</h6>
+                  {% for x in reservations %}
+
+                  <p data-type="{{x.date|date:'Y-m-d'}}" class="card-text list-group-item reservation-info">
+                    Time: {{x.time|date:"c"}} Table nº {{x.table_id}}
+                    {% if x.table_id == 1 %}
+                      <p>Hello this works</p>
+                    {% endif %}
+                  </p>
+                  {% empty %}
+                  <p class="card-text">All tables are free!</p>
+
+                  {% endfor %}
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-
-            <div class="card" style="width: 18rem;">
-              <div class="card-body card-height">
-                <h5 id='card-title-id' class="card-title">List of booked tables on:</h5>
-                <h6 id="date-selection" class="card-subtitle mb-2 text-muted">Select a date</h6>
-                {% for x in reservations %}
-                
-                <p data-type="{{x.date|date:'Y-m-d'}}" class="card-text list-group-item reservation-info">
-                  Time: {{x.time}} Table nº {{x.table_id}}
-                </p>
-                {% empty %}
-                <p class="card-text">All tables are free!</p>
-
-                {% endfor %}
-              </div>
-            </div>
-
-          </div>
-
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 
-  {%endblock%}
+{%endblock%}

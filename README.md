@@ -1,108 +1,109 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Table of Contents
 
-Welcome rubengardner,
+-   [1. UX](#ux)
+    -   [1.1. Strategy](#strategy)
+        -   [Project Goals](#project-goals)
+            -   [User Goals:](#user-goals)
+            -   [User stories](#tuser-stories)
+            -   [Strategy Table](#strategy-table)
+    -   [1.2. Structure](#structure)
+    -   [1.3. Skeleton](#skeleton)
+    -   [1.4. Surface](#surface)
+-   [2. Features](#features)
+-   [3. Technologies Used](#technologies-used)
+-   [4. Testing](#testing)
+-   [5. Development Cycle](#development-cycle)
+-   [6. Deployment](#deployment)
+-   [7. End Product](#end-product)
+-   [8. Known Bugs](#known-bugs)
+-   [9. Credits](#credits)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# 1 User experience
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## 1.1. Strategy
 
-## Gitpod Reminders
+[Go to the top](#table-of-contents)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Project Goals
+* The website features a modern design with minimalistic colors to keep the focus on the content.
+* The website is designed to adapt to different screen sizes for optimal accessibility.
+* The objective of this project is to simplify the process of user registration, login/logout, creating a user profile, and CRUD functionality for table reservations.
 
-`python3 -m http.server`
+### User Goals:
+First Time Visitor Goals:
+* As a new visitor, I want to easily make a reservation for a table on my desired date and time.
+* As a new visitor, I want to easily access the restaurant's menu to help me make a decision about booking a table.
+* As a new visitor, I want to have easy access to the restaurant's contact information.
+Returning Visitor Goals
 
-A blue button should appear to click: _Make Public_,
+Consolidated customer:
+* As a repeat customer, I want to be able to make changes to my existing table reservations.
+* As a repeat customer, I want to have the option to cancel a reservation that I previously made.
+* As a repeat customer, I want to be able to update my personal profile for future bookings.
 
-Another blue button should appear to click: _Open Browser_.
+All customers:
+* Navigation through the interface is straightforward.
+* It is easy to view my existing reservations.
+* I have the option to reach out to the restaurant for any inquiries
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### User stories:
+I utilized the GitHub projects board as my project management tool throughout the project by logging all user stories. This helped me to stay on track by moving the necessary tasks to the "in progress" lane as I worked on them and then moving them to the "done" lane once completed.
 
-A blue button should appear to click: _Make Public_,
+### Strategy Table
+Task| Importance| Viability/Feasibility
+------------ | -------------------------|---------
+Display a food Menu | 5 | 5
+Account signup | 5 | 4
+User resevation display | 5 | 5
+Responsive design | 5 | 5
+Contact page | 5 | 5
+Create a booking | 5 | 4
+Update a booking | 5 | 4
+Cancel a booking | 5 | 4
+Avoid double bookings | 4 | 3
+Multiple table occupancies | 4 | 1
+Show already booked tables | 4 | 3
 
-Another blue button should appear to click: _Open Browser_.
+### Scope
+The strategy table indicates that not all features can be immediately implemented in the initial release of the project. As a result, the project will be broken down into multiple phases. The initial phase will focus on incorporating the essential features necessary to create the minimum viable product.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Phase 1:
+* Showcase the food menu
+* Provide the option for users to create an account
+* Design that adapts to different screen sizes
+* Provide a contact form
+* Allow users to make a reservation
+* Allow users to make changes to a reservation
+* Allow users to cancel a reservation
 
-To log into the Heroku toolbelt CLI:
+Phase 2:
+* The ability to book multiple tables at once
+* A contact form that saves messages to the database
+* Send an email confirmation when a reservation is received
+* Email verification for account creation
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#  Technologies used
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Programing languages
+* HTML5
+* CSS3
+* JavaScript
+* Python
 
-------
+## Frameworks and libraries
+* Django: Including Django Allauth
+* Bootstrap 4.6
+* Google fonts
+* Font awesome
 
-## Release History
+## Database Management
+* Heroku Postgres
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Other tools
+* Git
+* GitPod
+* Github
+* Heroku
+* Am I responsive
+* W3C Markup Validator
+* W3C CSS Validator
