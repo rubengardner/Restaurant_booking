@@ -9,11 +9,12 @@
         <div class="jumbotron">
 
           <h3 class="display-4">Book a table</h3>
+          <hr class="my-4">
           <div class="row">
             <div class="col-md-6">
               <div class="card" style="width: 18rem;">
                 <div class="card-body card-height">
-                  <h5 class="card-title">Make your reservation</h5>
+                  <h5 class="card-title">Select your preferences</h5>
                   <p class="card-text ">
                     <form class='mt-5' method='post' action="booking">
                       {% csrf_token %}
@@ -36,10 +37,7 @@
                   {% for x in reservations %}
 
                   <p data-type="{{x.date|date:'Y-m-d'}}" class="card-text list-group-item reservation-info">
-                    Time: {{x.time|date:"c"}} Table nº {{x.table_id}}
-                    {% if x.table_id == 1 %}
-                      <p>Hello this works</p>
-                    {% endif %}
+                    Time: {{x.time}} Table nº {{x.table_id}}
                   </p>
                   {% empty %}
                   <p class="card-text">All tables are free!</p>

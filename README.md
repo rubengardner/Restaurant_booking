@@ -82,6 +82,39 @@ Phase 2:
 * Send an email confirmation when a reservation is received
 * Email verification for account creation
 
+
+[Go to the top](#table-of-contents)
+
+## Skeleton
+
+Home/Landing Page:
+![home_page](book_table/static/images/wireframes/home_landing.png)
+
+Home carrousel:
+![home_carrousel](book_table/static/images/wireframes/home_carrousel.png)
+
+Home text:
+![home_text](book_table/static/images/wireframes/home_text.png)
+
+Menu landing:
+![menu_landing](book_table/static/images/wireframes/menu_landing.png)
+
+Menu made poke:
+![menu_madepoke](book_table/static/images/wireframes/menu_madepoke.png)
+
+Menu allergens:
+![menu_allergens](book_table/static/images/wireframes/menu_allergens.png)
+
+Contact landing:
+![contact_landing](book_table/static/images/wireframes/contact_landing.png)
+
+Contact map:
+![contact_map](book_table/static/images/wireframes/contact_map.png)
+
+
+
+
+
 #  Technologies used
 
 ## Programing languages
