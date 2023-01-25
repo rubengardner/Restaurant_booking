@@ -49,6 +49,19 @@ All customers:
 ### User stories:
 I utilized the GitHub projects board as my project management tool throughout the project by logging all user stories. This helped me to stay on track by moving the necessary tasks to the "in progress" lane as I worked on them and then moving them to the "done" lane once completed.
 
+Backlog 1:
+![backlog_1](book_table/static/images/backlog/backlog_1.png)
+
+Backlog 2:
+![backlog_2](book_table/static/images/backlog/backlog_2.png)
+
+Backlog 3:
+![backlog_3](book_table/static/images/backlog/backlog_3.png)
+
+Backlog 4:
+![backlog_4](book_table/static/images/backlog/backlog_4.png)
+
+
 ### Strategy Table
 Task| Importance| Viability/Feasibility
 ------------ | -------------------------|---------
@@ -81,7 +94,6 @@ Phase 2:
 * A contact form that saves messages to the database
 * Send an email confirmation when a reservation is received
 * Email verification for account creation
-
 
 [Go to the top](#table-of-contents)
 ## Surface
@@ -170,6 +182,7 @@ Main page text:
 ![main_text](book_table/static/images/features/main_text.png)
 
 ### Menu page
+
 The menu page displays all the ingredients and dishes available, clearly indicating which dishes contain allergens, making it easy for those with allergies to know what they can and cannot eat.
 
 Menu page landing:
