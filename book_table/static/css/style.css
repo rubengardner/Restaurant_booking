@@ -23,51 +23,17 @@ p {
 
 /*--------------------Colour--------------*/
 
-.salmon-color {
-    background-color: rgba(254,111,97,0.2);
-}
-
 .salmon-filter {
     background-color: rgba(254,111,97,0.15);
 }
 
-.dark-grey {
-    background-color: rgb(52,58,64);
-}
-
-.transparent-blue{
-    background-color: rgba(234,238,255, 0.7);
-}
-
-.cream-colour {
-    background-color: rgba(255,240,201,1);
-}
-
-.dark-brown{
+.dark-brown {
     background-color: rgba(115,68,59,0.95);
-}
-
-.cream-filter {
-    background-color: #fff0c9;
-}
-
-.white-background{
-    background-color: white;
-}
-
-.salmon-text {
-    color: rgba(254,111,97,0.95);
 }
 
 .white-text {
     color: white;
 }
-
-.dark-text {
-    color: rgb(52,58,64);
-}
-
-
 
 
 /*--------------------List--------------*/
