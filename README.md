@@ -1,22 +1,20 @@
 # Table of Contents
 
 -   [1. UX](#ux)
-    -   [1.1. Strategy](#strategy)
-        -   [Project Goals](#project-goals)
-            -   [User Goals:](#user-goals)
-            -   [User stories](#tuser-stories)
-            -   [Strategy Table](#strategy-table)
-    -   [1.2. Wireframes](#wireframes)
-    -   [1.3. Skeleton](#skeleton)
-    -   [1.4. Surface](#surface)
--   [2. Features](#features)
--   [3. Technologies Used](#technologies-used)
--   [4. Testing](#testing)
--   [5. Development Cycle](#development-cycle)
--   [6. Deployment](#deployment)
--   [7. End Product](#end-product)
--   [8. Known Bugs](#known-bugs)
--   [9. Credits](#credits)
+    -   [1.1. Strategy](#strategy)  DONE
+        -   [Project Goals](#project-goals) DONE
+            -   [User Goals:](#user-goals) DONE
+            -   [User stories](#tuser-stories) DONE
+            -   [Strategy Table](#strategy-table) DONE
+-   [2. Wireframes](#wireframes) DONE
+-   [3. Surface](#surface) DONE
+-   [4. Database](#database) DONE
+-   [5. Features](#features) DONE
+-   [6. Technologies Used](#technologies-used) DONE, check for deployement
+-   [7. Testing](#testing)
+-   [8. Deployment](#deployment)
+-   [9. Known Bugs](#known-bugs)
+-   [10. Credits](#credits)
 
 # 1 User experience
 
@@ -95,22 +93,9 @@ Phase 2:
 * Send an email confirmation when a reservation is received
 * Email verification for account creation
 
-[Go to the top](#table-of-contents)
-## Surface
 
-### Color palette
 
-The website primarily utilizes the following colors:
-* Cream color: rgba(255,240,201,1)
-* Dark brown: rgba(115,68,59,0.95)
-* Salmon filter: rgba(254,111,97,0.15)
-* The inherent colors from Bootstrap
-
-### Typography
-
-The main font used throughout the website is Poppins. In case Poppins is not imported correctly, the fallback font will be a sans-serif font. The choice of Poppins was made after researching fonts that are optimized for reading
-
-## Skeleton
+## Wireframes
 
 Home/Landing Page:
 ![home_page](book_table/static/images/wireframes/home_landing.png)
@@ -144,6 +129,55 @@ Book a table:
 
 Sign Up:
 ![signup](book_table/static/images/wireframes/signup.png)
+
+## Surface
+
+### Color palette
+
+The website primarily utilizes the following colors:
+* Cream color: rgba(255,240,201,1)
+* Dark brown: rgba(115,68,59,0.95)
+* Salmon filter: rgba(254,111,97,0.15)
+* The inherent colors from Bootstrap
+
+### Typography
+
+The main font used throughout the website is Poppins. In case Poppins is not imported correctly, the fallback font will be a sans-serif font. The choice of Poppins was made after researching fonts that are optimized for reading
+
+## Database
+
+A diagram of the database model can be seen below:
+
+Database model:
+![database](book_table/static/images/features/erd_diagram.png)
+
+
+The final database structure is:
+```python
+class Table(models.Model):
+    number_of_seats = models.IntegerField(null=False, blank=False)
+
+    def __str__(self):
+        return f'Table {self.id}, seats: {self.number_of_seats}'
+
+
+class Reservation(models.Model):
+    time_services = [
+        (datetime.time(13, 0, 0), "13:00"),
+        (datetime.time(15, 0, 0), '15:00'),
+        (datetime.time(20, 0, 0), '20:00'),
+        (datetime.time(22, 0, 0), '22:00')]
+    client = models.ForeignKey(User, on_delete=models.CASCADE, related_name='restaurant_booking')
+    table = models.ForeignKey(Table, on_delete=models.CASCADE)
+    date = models.DateField(null=False, blank=False)
+    time = models.TimeField(null=False, blank=False, choices=time_services)
+
+    class Meta:
+        unique_together = ["table", "date", "time"]
+
+    def __str__(self):
+        return f'{self.date}'
+```
 
 ## Features
 
@@ -197,7 +231,7 @@ Menu page made your own poke:
 Menu page allergens:
 ![menu_allergens](book_table/static/images/features/menu_allergens.png)
 
-## Contact page
+### Contact page
 The contact page includes the location, opening hours, and telephone number of the business. Additionally, a cutout of the location on Google maps is provided for easy reference.
 
 Contact page info:
@@ -276,7 +310,7 @@ Messages:
 
 ![delete_success](book_table/static/images/features/delete_success.png)
 
-##  Technologies used
+## Technologies used
 
 ### Programing languages
 * HTML5
@@ -301,3 +335,128 @@ Messages:
 * Am I responsive
 * W3C Markup Validator
 * W3C CSS Validator
+
+## Testing
+
+### Code validator
+
+### Manual testing
+
+### Chrome lighthouse
+
+#### All Pages:
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Home page | When the "home" button in the navigation bar is clicked, the browser redirects the user to the home page and the "active" styling appears on the home button | PASS
+Menu page |When the "menu" button in the navigation bar is clicked, the browser redirects the user to the menu page and the "active" styling appears on the menu button.  | PASS
+Contact page | When the "contact" button in the navigation bar is clicked, the browser redirects the user to the contact page and the "active" styling appears on the contact button. | PASS
+Table bookingpage | When the "Table booking" button in the navigation bar is clicked, the browser redirects the user to the Table booking page and the "active" styling appears on the Table booking button.| PASS
+My booking page | When the "My booking" button in the navigation bar is clicked, the browser redirects the user to the My booking page and the "active" styling appears on the My booking button. | PASS
+Edit profile page | Checked foreground information is not distracted by backgrounds| PASS
+Register page |  When the "Register" button in the navigation bar is clicked, the browser redirects the user to the Register page and the "active" styling appears on the Register button. | PASS
+Foreground & background colour | Checked foreground information is not distracted by background color or images | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+
+#### Footer
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Facebook | When the Facebook icon is clicked, a new tab will open and the user will be redirected to the Facebook website. | PASS
+Instagram | When the Instagram icon is clicked, a new tab will open and the user will be redirected to the Instagram website. | PASS
+
+#### Home
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views..| PASS
+Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
+Carrousel | The links in the carousel are functional and take the user to the correct pages. | PASS
+Carrousel login | The information displayed in the carousel is dynamic and depends on the user's login status. | PASS
+
+Lightouse:
+![light1](book_table/static/images/lighthouse/light1.png)
+
+#### Menu page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
+Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
+
+Lightouse:
+![light2](book_table/static/images/lighthouse/light2.png)
+
+#### Contact page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Map | The map asset is displayed correctly, without any pixelation or stretched images, and is responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
+Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
+
+Lightouse:
+![light3](book_table/static/images/lighthouse/light3.png)
+
+#### Sign Up page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
+Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
+Register form | Checked the form submits only when all required fields are filled out. | PASS
+Sign in link | Checked the sign-in link redirects to the sign-in page. | PASS
+
+Lightouse:
+![light7](book_table/static/images/lighthouse/light7.png)
+
+#### Log in page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
+Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
+Sign in form | Checked the form submits only when all required fields are filled out. | PASS
+Signup link | Checked the signup link redirects to the signup page. | PASS
+
+Lightouse:
+![light8](book_table/static/images/lighthouse/light8.png)
+
+#### Book table page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
+Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
+Form | Checked the form submits only when all required fields are filled out. | PASS
+Date picker | When a date is selected, all reservations made for that day are displayed.| PASS
+
+Lightouse:
+![light4](book_table/static/images/lighthouse/light4.png)
+
+#### My bookings page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
+Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
+Dropdown | Clicking on a reservation activates the dropdown, showing the edit and delete button. | PASS
+Edit |Clicking on the edit button takes you to the edit page. | PASS
+Delete |When the delete button is clicked, a modal appears to confirm the action before it is executed. | PASS
+No reservation |A button linking to the book table page is present and functional.| PASS
+
+Lightouse:
+![light6](book_table/static/images/lighthouse/light6.png)
+
+#### Edit table page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed correctly, without any pixelation or stretched images, and are responsive on all devices. | PASS
+Responsiveness | All elements on the page have been checked to ensure consistent scalability across mobile, tablet, and desktop views.| PASS
+Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
+Form | Checked the form submits only when all required fields are filled out. | PASS
+
+Lightouse:
+![light5](book_table/static/images/lighthouse/light5.png)
+
+## Credits
+
+* Media: All images are taken from Pexels 
+* Code: Stack Overflow and W3Schools were frequently consulted for inspiration and to improve understanding of the implemented code.
