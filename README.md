@@ -6,7 +6,7 @@
             -   [User Goals:](#user-goals)
             -   [User stories](#tuser-stories)
             -   [Strategy Table](#strategy-table)
-    -   [1.2. Structure](#structure)
+    -   [1.2. Wireframes](#wireframes)
     -   [1.3. Skeleton](#skeleton)
     -   [1.4. Surface](#surface)
 -   [2. Features](#features)
@@ -132,37 +132,16 @@ If the user is not logged in:
 If the user is not logged in:
 ![navbar_login](book_table/static/images/features/nav_login.png)
 
+Navbar mobile:
+
+![nav_mobile](book_table/static/images/features/nav_mobile.png)
+
+![nav_mobile_display](book_table/static/images/features/nav_mobile_display.png)
+
 The footer, which contains social media icons, is located at the bottom of every webpage. Clicking on these icons will open the corresponding links in a new browser tab.
 
 If the user is not logged in:
 ![footer](book_table/static/images/features/footer.png)
-
-### Log in / Sign in pages
-
-Sign up:
-* The signup form is a straightforward process that requires the user to enter their unique username and a password. 
-* To ensure accuracy, the user must re-enter the password for confirmation and it must match the original password entered. 
-* There is a message to remind users that if they already have an account, they can click the sign-in link to be directed to the sign-in page.
-* If the user enters an username that is already registered, an error message will appear. The signup form includes a feature that checks the password's security.
-* If the user enters a password that is not secure, they will be prompted with a message to create a stronger password.
-* The signup form verifies that both passwords entered match. If the user enters passwords that do not match, an error message will appear to notify them.
-
-Sign up page:
-![signup](book_table/static/images/features/signup.png)
-
-Log in:
-* The login form requires users to enter their username and the password that they used when signing up for the site.
-* There is a message to remind users that if they haven't created an account, they can click the signup link to be directed to the signup page. 
-* If the user enters the wrong credentials, an error message will be displayed to inform them.
-
-Login page:
-![signin](book_table/static/images/features/signin.png)
-
-Logout: 
-When the user clicks the logout button from the navigation bar, a modal will appear to confirm the action before the user is logged out.
-
-Logout modal:
-![logout](book_table/static/images/features/logout.png)
 
 ### Main page
 
@@ -192,26 +171,103 @@ Menu page made your own poke:
 Menu page allergens:
 ![menu_allergens](book_table/static/images/features/menu_allergens.png)
 
+## Contact page
+The contact page includes the location, opening hours, and telephone number of the business. Additionally, a cutout of the location on Google maps is provided for easy reference.
+
+Contact page info:
+![contact_info](book_table/static/images/features/contact_info.png)
+
+Contact page map:
+![contact_map](book_table/static/images/features/contact_map.png)
+
+Menu page allergens:
+![menu_allergens](book_table/static/images/features/menu_allergens.png)
+
+### Log in / Sign in pages
+
+Sign up:
+* The signup form is a straightforward process that requires the user to enter their unique username and a password. 
+* To ensure accuracy, the user must re-enter the password for confirmation and it must match the original password entered. 
+* There is a message to remind users that if they already have an account, they can click the sign-in link to be directed to the sign-in page.
+* If the user enters an username that is already registered, an error message will appear. The signup form includes a feature that checks the password's security.
+* If the user enters a password that is not secure, they will be prompted with a message to create a stronger password.
+* The signup form verifies that both passwords entered match. If the user enters passwords that do not match, an error message will appear to notify them.
+
+Sign up page:
+![signup](book_table/static/images/features/signup.png)
+
+Log in:
+* The login form requires users to enter their username and the password that they used when signing up for the site.
+* There is a message to remind users that if they haven't created an account, they can click the signup link to be directed to the signup page. 
+* If the user enters the wrong credentials, an error message will be displayed to inform them.
+
+Login page:
+![signin](book_table/static/images/features/signin.png)
+
+Logout: 
+* When the user clicks the logout button from the navigation bar, a modal will appear to confirm the action before the user is logged out.
+
+Logout modal:
+![logout](book_table/static/images/features/logout.png)
+
+### Table booking
+
+* This section includes a form that allows the user to book a table at the restaurant.
+* The user must specify the date and time of the reservation.
+* When a date is chosen, the user will be shown which tables are already booked for that day, so they can select an available table.
+
+Table booking page:
+![book_table](book_table/static/images/features/book_table.png)
+
+Table booking page with reservations:
+![book_table_with_reservations](book_table/static/images/features/book_table_with_reservations.png)
 
 
-#  Technologies used
+### My bookings sections
 
-## Programing languages
+* This section lists all the reservations made by the user at the restaurant.
+* Each reservation includes a toggle button that, when clicked, displays more information, including buttons to edit or delete the reservation.
+* In case the user has not made any bookings, a button will appear in this section that redirects the user to the booking page.
+
+My bookings with reservations:
+![mybookings](book_table/static/images/features/mybookings.png)
+
+My bookings with NO reservations:
+![mybookings_none](book_table/static/images/features/mybookings_none.png)
+
+
+### Messages
+Certain actions on the website will trigger messages to appear at the top of the page. The color of message is used to indicate the status of the action, such as a green message indicating a successful action and a red message indicating a failure or rejection.
+
+* Accepted reservation (green): The reservation has been accepted and confirmed.
+* Denied reservation (red): The reservation has been denied or rejected.
+* Deleted reservation (green): The reservation has been deleted successfully.
+
+Messages:
+![reservation_success](book_table/static/images/features/reservation_success.png)
+
+![message_error](book_table/static/images/features/message_error.png)
+
+![delete_success](book_table/static/images/features/delete_success.png)
+
+##  Technologies used
+
+### Programing languages
 * HTML5
 * CSS3
 * JavaScript
 * Python
 
-## Frameworks and libraries
+### Frameworks and libraries
 * Django: Including Django Allauth
 * Bootstrap 4.6
 * Google fonts
 * Font awesome
 
-## Database Management
+### Database Management
 * Heroku Postgres
 
-## Other tools
+### Other tools
 * Git
 * GitPod
 * Github
