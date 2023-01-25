@@ -84,6 +84,19 @@ Phase 2:
 
 
 [Go to the top](#table-of-contents)
+## Surface
+
+### Color palette
+
+The website primarily utilizes the following colors:
+* Cream color: rgba(255,240,201,1)
+* Dark brown: rgba(115,68,59,0.95)
+* Salmon filter: rgba(254,111,97,0.15)
+* The inherent colors from Bootstrap
+
+### Typography
+
+The main font used throughout the website is Poppins. In case Poppins is not imported correctly, the fallback font will be a sans-serif font. The choice of Poppins was made after researching fonts that are optimized for reading
 
 ## Skeleton
 
