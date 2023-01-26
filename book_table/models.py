@@ -17,7 +17,9 @@ class Reservation(models.Model):
         (datetime.time(15, 0, 0), '15:00'),
         (datetime.time(20, 0, 0), '20:00'),
         (datetime.time(22, 0, 0), '22:00')]
-    client = models.ForeignKey(User, on_delete=models.CASCADE, related_name='restaurant_booking')
+    client = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='restaurant_booking'
+    )
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
     date = models.DateField(null=False, blank=False)
     time = models.TimeField(null=False, blank=False, choices=time_services)

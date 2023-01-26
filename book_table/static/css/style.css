@@ -1,10 +1,10 @@
 /*------------------All pages--------------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgba(255,240,201,1);
-    
+    background-color: rgba(255, 240, 201, 1);
+
 }
 
 p {
@@ -12,23 +12,23 @@ p {
 }
 
 
-.vertical-center{
+.vertical-center {
     margin: 0;
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    
+
 }
 
 /*--------------------Colour--------------*/
 
 .salmon-filter {
-    background-color: rgba(254,111,97,0.15);
+    background-color: rgba(254, 111, 97, 0.15);
 }
 
 .dark-brown {
-    background-color: rgba(115,68,59,0.95);
+    background-color: rgba(115, 68, 59, 0.95);
 }
 
 .white-text {
@@ -37,7 +37,7 @@ p {
 
 
 /*--------------------List--------------*/
-.no-bullet{
+.no-bullet {
     list-style: none;
 }
 
@@ -52,7 +52,7 @@ p {
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
-    
+
 }
 
 .poke-image {
@@ -79,12 +79,12 @@ p {
     overflow: hidden;
     border-radius: 15px;
 
-    
+
 }
 
 .carousel-postion-1 {
     position: absolute;
-    top:25%;
+    top: 25%;
 }
 
 /*--------Menu page-------------*/
@@ -100,7 +100,7 @@ p {
 .picture-title {
     position: absolute;
     top: 30%;
-    left:10%;
+    left: 10%;
     padding: 40px;
 }
 
@@ -108,13 +108,13 @@ p {
     padding: 50px 0 50px 0;
 }
 
-.made-choice{
+.made-choice {
     width: 70%;
     margin: auto;
     padding: 15px;
 }
 
-#make-your-poke{
+#make-your-poke {
     background: url("../images/poke-dark.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -138,7 +138,7 @@ p {
     margin: auto;
 }
 
-.carousel-text{
+.carousel-text {
     width: 90%;
 }
 
@@ -158,17 +158,17 @@ p {
 }
 
 /*--------Booking menu-------------*/
-.booking-form{
-    width:50%;
-    left:25%;
+.booking-form {
+    width: 50%;
+    left: 25%;
     position: absolute;
 }
 
-.reservation-info{
-    display:none;
+.reservation-info {
+    display: none;
 }
 
-.card-height{
+.card-height {
     height: 350px;
 }
 
@@ -178,20 +178,19 @@ p {
     font-size: 15pt;
 }
 
-
 /*--------Footer-------------*/
-.footer-link{
+.footer-link {
     font-size: 20pt;
     color: white;
     text-decoration: none;
 }
 
 .footer-link i {
-    color:#b1dfd7;
-  }
+    color: #b1dfd7;
+}
 
 /*--------Jumbotrons-------------*/
-.jumbo-height{
+.jumbo-height {
     min-height: 500px;
 }
 
@@ -211,6 +210,6 @@ p {
 
     .picture-title {
         padding: 20px;
-        width:80%;
+        width: 80%;
     }
 }

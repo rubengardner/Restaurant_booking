@@ -139,6 +139,16 @@ The website primarily utilizes the following colors:
 * Dark brown: rgba(115,68,59,0.95)
 * Salmon filter: rgba(254,111,97,0.15)
 * The inherent colors from Bootstrap
+* White
+* Black
+
+The website has been tested for accessibility using WebAIM's contrast checker to ensure that the text and background colors used on the website provide enough contrast for users to read the information displayed on the web.
+
+Contrast check 1:
+![contrast check 1](book_table/static/images/features/contrast_check1.png)
+
+Contrast check 2:
+![contrast check 2](book_table/static/images/features/contrast_check2.png)
 
 ### Typography
 
@@ -339,10 +349,29 @@ Messages:
 ## Testing
 
 ### Code validator
+The W3C Markup Validator was utilized to conduct a thorough check for errors within the HTML and CSS pages. Only one error was identified in the HTML files, and none in the CSS files. The error was promptly resolved.
+
+Error HTML:
+![HTML](book_table/static/images/features/html_online_check.png)
+
+CSS no errors:
+![CSS](book_table/static/images/features/css_online_check.png)
+
+The JavaScript code was checked for errors using JSHint. One error was identified and resolved.
+
+JS errors:
+![js1](book_table/static/images/features/js_check1.png)
+
+JS no errors:
+![js2](book_table/static/images/features/js_check2.png)
+
+
+GitPod was used to validate the python code and identify any errors. While most errors were resolved, some were left unresolved because resolving them would imply improper syntax. These errors are listed and described below.
+
+Python errors:
+![python](book_table/static/images/features/python_validate.png)
 
 ### Manual testing
-
-### Chrome lighthouse
 
 #### All Pages:
 TEST            | OUTCOME                          | PASS / FAIL  

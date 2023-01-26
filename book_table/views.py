@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, HttpResponse, get_list_or_404, get_object_or_404
+from django.shortcuts import render, redirect, HttpResponse, get_list_or_404, \
+    get_object_or_404
 from .models import Reservation
 from .forms import ReservationForm
 from django.contrib import messages
@@ -21,22 +22,24 @@ def contact_view(request):
 def add_reservation(request):
 
     if request.method == 'POST':
-        form = ReservationForm(request.POST) 
+        form = ReservationForm(request.POST)
 
         if form.is_valid():
             reserv = form.save(commit=False)
             reserv.client = request.user
             reserv.save()
-            messages.success(request, 'Reservation request submitted succesfully.')
+            messages.success(
+                request, 'Reservation request submitted succesfully.'
+                )
         else:
             messages.error(request, 'The table is already booked.')
             reserv = form.instance.date
 
     try:
         reservations = get_list_or_404(Reservation)
-    except:
+    except Exception:
         reservations = None
-    
+
     form = ReservationForm()
     context = {
         'form': form,
@@ -49,7 +52,7 @@ def add_reservation(request):
 def mybooking_view(request):
     try:
         reservations = get_list_or_404(Reservation, client=request.user)
-    except:
+    except Exception:
         reservations = None
 
     form = ReservationForm()
@@ -63,7 +66,7 @@ def edit_booking(request, reservation_id):
 
     try:
         reservations = get_list_or_404(Reservation)
-    except:
+    except Exception:
         reservations = None
 
     reservation = get_object_or_404(Reservation, id=reservation_id)

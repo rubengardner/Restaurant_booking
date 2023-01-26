@@ -1,6 +1,5 @@
-
 document.getElementById('id_date').addEventListener('change', function() {
-    reservations = document.getElementsByClassName('reservation-info');
+    let reservations = document.getElementsByClassName('reservation-info');
     for ( let reservation of reservations){
         reservation.style.display = "block";
         let tag = reservation.getAttribute('data-type');
