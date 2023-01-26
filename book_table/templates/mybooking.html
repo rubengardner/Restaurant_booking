@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<!-- My booking section -->
 <section>
   <div class="container">
     <div class="row">
@@ -11,6 +12,7 @@
           <p>On this page, you can access your reservations, review the details, make modifications or cancel the
             booking.</p>
           <hr class="my-4">
+          <!-- Displays all the reservations of the user-->
           {% for reservation in reservations%}
           <div class="accordion" id="accordionExample">
             <div class="card">
@@ -36,7 +38,7 @@
                 </div>
               </div>
             </div>
-            <!-- Modal -->
+            <!-- Delete modal -->
             <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
               aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -63,18 +65,18 @@
           <div class="row ">
             <div class="col text-center pt-5">
               <div class="card pt-5 pb-5">
-              <h2>No bookings</h2>
-              <p class="pt-3 pb-3">Want to book a table?</p>
-              <div>
-              <a class="btn btn-info" href="{% url 'booking' %}">Booking</a>
+                <h2>No bookings</h2>
+                <p class="pt-3 pb-3">Want to book a table?</p>
+                <div>
+                  <a class="btn btn-info" href="{% url 'booking' %}">Booking</a>
+                </div>
+              </div>
             </div>
-          </div>
-          </div>
           </div>
           {% endfor %}
         </div>
       </div>
-      </div>
     </div>
+  </div>
 </section>
 {%endblock%}

@@ -8,7 +8,5 @@ document.getElementById('id_date').addEventListener('change', function() {
             reservation.style.display = "none";
     }
     document.getElementById('date-selection').innerHTML = this.value;
-    
-
   });
 

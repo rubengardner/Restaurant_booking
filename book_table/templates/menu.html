@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<!-- Landing section for menu -->
 <section>
   <div class="row menu-header m-0 no-gutters">
     <div class="col salmon-filter">
@@ -11,153 +13,159 @@
     </div>
   </div>
 </section>
+
+<!-- Ready made poke section -->
 <section id="made-poke">
   <h3 class="text-center">Our regular pokes</h3>
-
-<div class="row no-gutters">
-  <div class="col">
-    <p class="text-center price">Small - 8€ / Medium - 10€ / Large - 12€ / Giant - 15€</p>
-  </div>
-</div>
-<div class="row no-gutters">
-  <div class="col-md-6">
-    <div class="made-choice">
-      <h4>Honolulu <i class="fa-solid fa-fish"></i> <i class="fa-solid fa-egg"></i></h4>
-      <p>Rice, double salmon, avocado, wakame seaweed, ginger, spicy mayo</p>
-    </div>
-    <div class="made-choice">
-      <h4>Waikiki <i class="fa-solid fa-fish"></i> <i class="fa-solid fa-wheat-awn"></i> <i class="fa-solid fa-shrimp"></i> </h4>
-      <p>Kale, salmon, prawns, cucumber, edamame, pineapple, beetroot, soy</p>
-    </div>
-    <div class="made-choice">
-      <h4>Maui <i class="fa-solid fa-egg"></i> </h4>
-      <p> Quinoa, chicken, eggs, sauerkraut, mango, carrots, pumpkin seeds, honey and mustard</p>
+  <div class="row no-gutters">
+    <div class="col">
+      <p class="text-center price">Small - 8€ / Medium - 10€ / Large - 12€ / Giant - 15€</p>
     </div>
   </div>
-  <div class="col-md-6">
-    <div class="made-choice">
-      <h4>Vegan power <i class="fa-solid fa-seedling"></i> <i class="fa-solid fa-wheat-awn"></i></h4>
-      <p>Lettuce, double tofu, avocado, mango, pineapple, ginger, soy</p>
+  <div class="row no-gutters">
+    <div class="col-md-6">
+      <div class="made-choice">
+        <h4>Honolulu <i class="fa-solid fa-fish"></i> <i class="fa-solid fa-egg"></i></h4>
+        <p>Rice, double salmon, avocado, wakame seaweed, ginger, spicy mayo</p>
+      </div>
+      <div class="made-choice">
+        <h4>Waikiki <i class="fa-solid fa-fish"></i> <i class="fa-solid fa-wheat-awn"></i> <i
+            class="fa-solid fa-shrimp"></i> </h4>
+        <p>Kale, salmon, prawns, cucumber, edamame, pineapple, beetroot, soy</p>
+      </div>
+      <div class="made-choice">
+        <h4>Maui <i class="fa-solid fa-egg"></i> </h4>
+        <p> Quinoa, chicken, eggs, sauerkraut, mango, carrots, pumpkin seeds, honey and mustard</p>
+      </div>
     </div>
-    <div class="made-choice">
-      <h4>Spicy Tuna <i class="fa-solid fa-fish"></i> <i class="fa-solid fa-egg"></i> </h4>
-      <p>Rice, double tuna, ginger, carrots, edamame, pumpkin seeds, spicy mayo</p>
-    </div>
-    <div class="made-choice">
-      <h4>Creamy chicken <i class="fa-solid fa-wheat-awn"></i></h4>
-      <p>Barley, double chicken, avocado, mango, betroot, honey and mustard</p>
+    <div class="col-md-6">
+      <div class="made-choice">
+        <h4>Vegan power <i class="fa-solid fa-seedling"></i> <i class="fa-solid fa-wheat-awn"></i></h4>
+        <p>Lettuce, double tofu, avocado, mango, pineapple, ginger, soy</p>
+      </div>
+      <div class="made-choice">
+        <h4>Spicy Tuna <i class="fa-solid fa-fish"></i> <i class="fa-solid fa-egg"></i> </h4>
+        <p>Rice, double tuna, ginger, carrots, edamame, pumpkin seeds, spicy mayo</p>
+      </div>
+      <div class="made-choice">
+        <h4>Creamy chicken <i class="fa-solid fa-wheat-awn"></i></h4>
+        <p>Barley, double chicken, avocado, mango, betroot, honey and mustard</p>
+      </div>
     </div>
   </div>
-</div>
 </section>
+
+<!-- Make your poke section -->
 <section id='make-your-poke' class="pt-5 pb-5">
-    <div class="row no-gutters">
-        <div class="col pt-5">
-          
-            <div id="carouselExampleIndicators" class="carousel slide carousel-menu text-white dark-brown" data-ride="carousel">
-              <h3 class="text-center pb-4 pt-2">Make your own poke:</h3>
-                <ol class="carousel-indicators no-bullet">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <h4 class="text-center pb-3">Size</h4>
-                    <div class="carousel-position">
-                    <ul>
-                      <li><b>Small:</b> 20g of protein, 400 ml bowl</li>
-                      <li><b>Medium:</b> 35g of protein, 500 ml bowl</li>
-                      <li><b>Large:</b> 50g of protein, 600 ml bowl</li>
-                      <li><b>Giant:</b> 100g of protein, 700 ml bowl</li>
-                    </ul>
-                  </div>
-                </div>
-                  <div class="carousel-item ">
-                    <h4 class="text-center pb-3">Base</h4>
-                    <div class="carousel-position">
-                    <ul>
-                      <li><b>Rice:</b> cooked the sushi way</li>
-                      <li><b>Quinoa:</b> Mix of white and red quinoa</li>
-                      <li><b>Barley:</b> Stronger presence in the bowl <i class="fa-solid fa-wheat-awn"></i></li>
-                      <li><b>Kale:</b> Recharge your folic acid reserves</li>
-                      <li><b>Lettuce:</b> erfect for a lighter meal</li>
-                    </ul>
-                  </div>
-                  </div>
-                  <div class="carousel-item">
-                    <h4 class="text-center pb-3"> Protein (Max 2)</h4>
-                    <div class="carousel-position">
-                    <ul>
-                      <li><b>Tuna:</b> Smoked <i class="fa-solid fa-fish"></i></li>
-                      <li><b>Tofu:</b> Firm consistency <i class="fa-solid fa-wheat-awn"></i></li>
-                      <li><b>Salmon:</b> Raw salmon <i class="fa-solid fa-fish"></i></li>
-                      <li><b>Prawn:</b> Boiled <i class="fa-solid fa-shrimp"></i></li>
-                      <li><b>Chicken:</b> Free range </li>
-                      <li><b>Hard Boiled egg:</b> Free range <i class="fa-solid fa-egg"></i></li>
-                    </ul>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <h4 class="text-center pb-3">Toppings (Max 4)</h4>
-                    <div class="carousel-position">
-                    <ul>
-                      <li><b>Fruit:</b> Mango, Pineapple, Avocado, Banana</li>
-                      <li><b>Vegetable:</b> Cucumber, Tomatoes, Carrots, Betroots</li>
-                      <li><b>Nuts & Seeds:</b> Peanuts, Pumpkin seeds, Edamame</li>
-                      <li><b>Other:</b> Nori seaweed, Sauerkraut, Ginger</li>
-                    </ul>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <h4 class="text-center pb-3">Sauce</h4>
-                    <div class="carousel-position">
-                    <ul>
-                      <li><b>Soy:</b> Classic sauce, good with fish<i class="fa-solid fa-wheat-awn"></i></li>
-                      <li><b>Honey and mustard:</b> Sweet and powerful</li>
-                      <li><b>Sweet chili:</b> A bit spicy</li>
-                      <li><b>Teriyaki</b> Powerful taste <i class="fa-solid fa-shrimp"></i></li>
-                      <li><b>Spicy mayo</b> Creamy and spicy <i class="fa-solid fa-egg"></i></i></li>
-                    </ul>
-                    </div>
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
+  <div class="row no-gutters">
+    <div class="col pt-5">
+      <div id="carouselExampleIndicators" class="carousel slide carousel-menu text-white dark-brown"
+        data-ride="carousel">
+        <h3 class="text-center pb-4 pt-2">Make your own poke:</h3>
+        <ol class="carousel-indicators no-bullet">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h4 class="text-center pb-3">Size</h4>
+            <div class="carousel-position">
+              <ul>
+                <li><b>Small:</b> 20g of protein, 400 ml bowl</li>
+                <li><b>Medium:</b> 35g of protein, 500 ml bowl</li>
+                <li><b>Large:</b> 50g of protein, 600 ml bowl</li>
+                <li><b>Giant:</b> 100g of protein, 700 ml bowl</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <h4 class="text-center pb-3">Base</h4>
+            <div class="carousel-position">
+              <ul>
+                <li><b>Rice:</b> cooked the sushi way</li>
+                <li><b>Quinoa:</b> Mix of white and red quinoa</li>
+                <li><b>Barley:</b> Stronger presence in the bowl <i class="fa-solid fa-wheat-awn"></i></li>
+                <li><b>Kale:</b> Recharge your folic acid reserves</li>
+                <li><b>Lettuce:</b> erfect for a lighter meal</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <h4 class="text-center pb-3"> Protein (Max 2)</h4>
+            <div class="carousel-position">
+              <ul>
+                <li><b>Tuna:</b> Smoked <i class="fa-solid fa-fish"></i></li>
+                <li><b>Tofu:</b> Firm consistency <i class="fa-solid fa-wheat-awn"></i></li>
+                <li><b>Salmon:</b> Raw salmon <i class="fa-solid fa-fish"></i></li>
+                <li><b>Prawn:</b> Boiled <i class="fa-solid fa-shrimp"></i></li>
+                <li><b>Chicken:</b> Free range </li>
+                <li><b>Hard Boiled egg:</b> Free range <i class="fa-solid fa-egg"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <h4 class="text-center pb-3">Toppings (Max 4)</h4>
+            <div class="carousel-position">
+              <ul>
+                <li><b>Fruit:</b> Mango, Pineapple, Avocado, Banana</li>
+                <li><b>Vegetable:</b> Cucumber, Tomatoes, Carrots, Betroots</li>
+                <li><b>Nuts & Seeds:</b> Peanuts, Pumpkin seeds, Edamame</li>
+                <li><b>Other:</b> Nori seaweed, Sauerkraut, Ginger</li>
+              </ul>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <h4 class="text-center pb-3">Sauce</h4>
+            <div class="carousel-position">
+              <ul>
+                <li><b>Soy:</b> Classic sauce, good with fish<i class="fa-solid fa-wheat-awn"></i></li>
+                <li><b>Honey and mustard:</b> Sweet and powerful</li>
+                <li><b>Sweet chili:</b> A bit spicy</li>
+                <li><b>Teriyaki</b> Powerful taste <i class="fa-solid fa-shrimp"></i></li>
+                <li><b>Spicy mayo</b> Creamy and spicy <i class="fa-solid fa-egg"></i></i></li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
+  </div>
 </section>
 
+<!-- Allergen section -->
 <section class="allergen p-5">
   <h2 class="text-center">Allergens</h2>
-  <div class="row no-gutters m-0" >
+  <div class="row no-gutters m-0">
     <div class="col-md-6 mt-5">
-        <p class="text-center allergen-size"><i class="fa-solid fa-seedling "></i> Vegan</p>
-        <p class="text-center allergen-size"><i class="fa-solid fa-fish"></i> Fish</p>
-        <p class="text-center allergen-size"><i class="fa-solid fa-egg"></i> Egg </p>
+      <p class="text-center allergen-size"><i class="fa-solid fa-seedling "></i> Vegan</p>
+      <p class="text-center allergen-size"><i class="fa-solid fa-fish"></i> Fish</p>
+      <p class="text-center allergen-size"><i class="fa-solid fa-egg"></i> Egg </p>
     </div>
     <div class="col-md-6 mt-5">
-        <p class="text-center allergen-size"><i class="fa-solid fa-wheat-awn"></i> Gluten </p>
-        <p class="text-center allergen-size"><i class="fa-solid fa-shrimp"></i> Crustacean</p>
-        <p class="text-center allergen-size"><i class="fa-solid fa-cheese"></i> Dairy</p>
+      <p class="text-center allergen-size"><i class="fa-solid fa-wheat-awn"></i> Gluten </p>
+      <p class="text-center allergen-size"><i class="fa-solid fa-shrimp"></i> Crustacean</p>
+      <p class="text-center allergen-size"><i class="fa-solid fa-cheese"></i> Dairy</p>
     </div>
     <div class="text-center row">
       <div class="text-center col">
         <p class=" mt-4">
-          Allergens: Attention customers with food allergies. Please be aware that our food may contain or come into contact with common allergens,
+          Allergens: Attention customers with food allergies. Please be aware that our food may contain or come into
+          contact with common allergens,
           such as dairy, eggs, wheat, soybeans, tree nuts, peanuts, fish, shellfish or wheat. </p>
       </div>
     </div>
-    
+
 </section>
 
 {%endblock%}

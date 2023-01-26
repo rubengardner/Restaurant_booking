@@ -7,8 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name ="keywords"
-    content = "restaurant, poke, sushi, hawaii, salmon, vegan, ecologic, fast food">
+  <meta name="keywords" content="restaurant, poke, sushi, hawaii, salmon, vegan, ecologic, fast food">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -17,6 +16,7 @@
 
 <body>
   <header>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="{% url 'index' %}">PokeDream</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -26,23 +26,27 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'index' %}">Home <span
+                class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link {% if request.path == '/menu' %}active{% endif %}" href="{% url 'menu' %}">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if request.path == '/contact' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+            <a class="nav-link {% if request.path == '/contact' %}active{% endif %}"
+              href="{% url 'contact' %}">Contact</a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link {% if request.path == '/booking' %}active{% endif %}" href="{% url 'booking' %}">Table booking</a>
+            <a class="nav-link {% if request.path == '/booking' %}active{% endif %}" href="{% url 'booking' %}">Table
+              booking</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if request.path == '/mybookings' %}active{% endif %}" href="{% url 'mybookings' %}">My bookings</a>
+            <a class="nav-link {% if request.path == '/mybookings' %}active{% endif %}" href="{% url 'mybookings' %}">My
+              bookings</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#" data-toggle="modal" data-target="#exampleModal">Logout</a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Logout</a>
           </li>
           {% else %}
           <li class="nav-item {% if request.path == '/accounts/signup/' %}active{% endif %}">
@@ -56,13 +60,11 @@
       </div>
     </nav>
   </header>
-  
   {% include 'messages.html' %}
   {% block content %}
   <!-- Content Goes here -->
   {% endblock content %}
-
-  <!-- Modal -->
+  <!-- Log out Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -89,7 +91,7 @@
       </div>
     </div>
   </div>
-
+  <!-- Footer -->
   <footer class="container-fluid text-center  pt-4  navbar-dark bg-dark">
     <div class="row">
       <div class="col-12">
@@ -109,11 +111,7 @@
           </li>
       </div>
     </div>
-
-
   </footer>
-
-
 
   <script src="https://kit.fontawesome.com/0393cc7668.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
