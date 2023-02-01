@@ -1,0 +1,40 @@
+from django.test import TestCase
+
+
+class TestViews(TestCase):
+
+    def test_index_view(self):
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html')
+        self.assertTemplateUsed(response, 'base.html')
+        self.assertTemplateUsed(response, 'messages.html')
+
+    def test_menu_view(self):
+        response = self.client.get('/menu')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'menu.html')
+        self.assertTemplateUsed(response, 'base.html')
+        self.assertTemplateUsed(response, 'messages.html')
+
+    def test_contact_view(self):
+        response = self.client.get('/contact')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'contact.html')
+        self.assertTemplateUsed(response, 'base.html')
+        self.assertTemplateUsed(response, 'messages.html')
+
+    def test_contact_view(self):
+        response = self.client.get('/booking')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'table_booking.html')
+        self.assertTemplateUsed(response, 'base.html')
+        self.assertTemplateUsed(response, 'messages.html')
+
+    def test_contact_view(self):
+        reservation = Reservation.objecrs.create(date=)
+        response = self.client.get('/booking')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'table_booking.html')
+        self.assertTemplateUsed(response, 'base.html')
+        self.assertTemplateUsed(response, 'messages.html')
