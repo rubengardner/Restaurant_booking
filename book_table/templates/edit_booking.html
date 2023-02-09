@@ -31,22 +31,6 @@
               </div>
             </div>
             <div class="col-md-6">
-              <!-- List of booked tables -->
-              <div class="card mt-4" style="width: 18rem;">
-                <div class="card-body card-height">
-                  <h5 id='card-title-id' class="card-title">List of booked tables on:</h5>
-                  <h6 id="date-selection" class="card-subtitle mb-2 text-muted">Select a date</h6>
-                  {% for x in reservations %}
-
-                  <p data-type="{{x.date|date:'Y-m-d'}}" class="card-text list-group-item reservation-info">
-                    Time: {{x.time}} Table nº {{x.table_id}}
-                  </p>
-                  {% empty %}
-                  <p class="card-text">All tables are free!</p>
-
-                  {% endfor %}
-                </div>
-              </div>
             </div>
           </div>
         </div>
