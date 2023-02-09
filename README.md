@@ -371,6 +371,10 @@ GitPod was used to validate the python code and identify any errors. While most 
 Python errors:
 ![python](book_table/static/images/features/python_validate.png)
 
+### TDD
+
+Some testing was automated. These test can be seen in the file: test_forms.py. Only the form was tested using TDD, but the same principles could be applied to the views and models.
+
 ### Manual testing
 
 #### All Pages:
