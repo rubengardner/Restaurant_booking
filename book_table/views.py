@@ -35,16 +35,9 @@ def add_reservation(request):
             messages.error(request, 'The table is already booked.')
             reserv = form.instance.date
 
-    try:
-        reservations = get_list_or_404(Reservation)
-    except Exception:
-        reservations = None
-
     form = ReservationForm()
     context = {
         'form': form,
-        'reservations': reservations,
-        'nbar': 'add'
     }
     return render(request, 'table_booking.html', context)
 
@@ -64,10 +57,6 @@ def mybooking_view(request):
 
 def edit_booking(request, reservation_id):
 
-    try:
-        reservations = get_list_or_404(Reservation)
-    except Exception:
-        reservations = None
 
     reservation = get_object_or_404(Reservation, id=reservation_id)
     if request.method == 'POST':
@@ -82,7 +71,6 @@ def edit_booking(request, reservation_id):
     form = ReservationForm(instance=reservation)
     context = {
         'form': form,
-        'reservations': reservations,
     }
     return render(request, 'edit_booking.html', context)
 
