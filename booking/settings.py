@@ -32,7 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["pokedream.herokuapp.com"]
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+ALLOWED_HOSTS = ["pokedream.herokuapp.com", "localhost"]
 
 
 # Application definition
