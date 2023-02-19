@@ -44,7 +44,7 @@ p {
 /*--------------------Index page--------------*/
 
 .logo {
-    background: url("../images/poke-dark-4.jpg");
+    background: url("../media/poke-dark-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,7 +56,7 @@ p {
 }
 
 .poke-image {
-    background: url("../images/poke-sauce.jpg");
+    background: url("../media/poke-sauce.jpg");
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -90,7 +90,7 @@ p {
 /*--------Menu page-------------*/
 
 .menu-header {
-    background: url("../images/salmon-knife.jpg");
+    background: url("../media/salmon-knife.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,7 +115,7 @@ p {
 }
 
 #make-your-poke {
-    background: url("../images/poke-dark.jpg");
+    background: url("../media/poke-dark.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
