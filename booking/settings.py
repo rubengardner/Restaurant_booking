@@ -155,7 +155,7 @@ USE_TZ = True
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'ddvquebst',
     'API_KEY': '765314576462544',
-    'API_SECRET': 'k9FG3e6h7sXRPfYifXvciLtY-lA'
+    'API_SECRET': os.environ.get('SECRET_CLOUDINARY_API')
 }
 
 
