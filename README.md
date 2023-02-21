@@ -73,7 +73,7 @@ Update a booking | 5 | 4
 Cancel a booking | 5 | 4
 Avoid double bookings | 4 | 3
 Multiple table occupancies | 4 | 1
-Show already booked tables | 4 | 3
+Show already booked tables | 4 | 1
 
 ### Scope
 The strategy table indicates that not all features can be immediately implemented in the initial release of the project. As a result, the project will be broken down into multiple phases. The initial phase will focus on incorporating the essential features necessary to create the minimum viable product.
@@ -92,43 +92,44 @@ Phase 2:
 * A contact form that saves messages to the database
 * Send an email confirmation when a reservation is received
 * Email verification for account creation
+* The posibility of seeing already booked tables
 
 
 
 ## Wireframes
 
 Home/Landing Page:
-![home_page](book_table/static/images/wireframes/home_landing.png)
+![home_page](images/wireframes/home_landing.png)
 
 Home carrousel:
-![home_carrousel](book_table/static/images/wireframes/home_carrousel.png)
+![home_carrousel](images/wireframes/home_carrousel.png)
 
 Home text:
-![home_text](book_table/static/images/wireframes/home_text.png)
+![home_text](images/wireframes/home_text.png)
 
 Menu landing:
-![menu_landing](book_table/static/images/wireframes/menu_landing.png)
+![menu_landing](images/wireframes/menu_landing.png)
 
 Menu made poke:
-![menu_madepoke](book_table/static/images/wireframes/menu_madepoke.png)
+![menu_madepoke](images/wireframes/menu_madepoke.png)
 
 Menu allergens:
-![menu_allergens](book_table/static/images/wireframes/menu_allergens.png)
+![menu_allergens](images/wireframes/menu_allergens.png)
 
 Contact landing:
-![contact_landing](book_table/static/images/wireframes/contact_landing.png)
+![contact_landing](images/wireframes/contact_landing.png)
 
 Contact map:
-![contact_map](book_table/static/images/wireframes/contact_map.png)
+![contact_map](images/wireframes/contact_map.png)
 
 My bookings:
-![mybookings](book_table/static/images/wireframes/mybookings.png)
+![mybookings](images/wireframes/mybookings.png)
 
 Book a table:
-![book_a_table](book_table/static/images/wireframes/book_a_table.png)
+![book_a_table](images/wireframes/book_a_table.png)
 
 Sign Up:
-![signup](book_table/static/images/wireframes/signup.png)
+![signup](images/wireframes/signup.png)
 
 ## Surface
 
@@ -145,10 +146,10 @@ The website primarily utilizes the following colors:
 The website has been tested for accessibility using WebAIM's contrast checker to ensure that the text and background colors used on the website provide enough contrast for users to read the information displayed on the web.
 
 Contrast check 1:
-![contrast check 1](book_table/static/images/features/contrast_check1.png)
+![contrast check 1](images/features/contrast_check1.png)
 
 Contrast check 2:
-![contrast check 2](book_table/static/images/features/contrast_check2.png)
+![contrast check 2](images/features/contrast_check2.png)
 
 ### Typography
 
@@ -159,7 +160,7 @@ The main font used throughout the website is Poppins. In case Poppins is not imp
 A diagram of the database model can be seen below:
 
 Database model:
-![database](book_table/static/images/features/erd_diagram.png)
+![database](images/features/erd_diagram.png)
 
 
 The final database structure is:
@@ -196,62 +197,62 @@ class Reservation(models.Model):
 The navigation bar is located at the top and its options can vary depending on the user's login status. 
 
 If the user is not logged in:
-![navbar_no_login](book_table/static/images/features/nav_nologin.png)
+![navbar_no_login](images/features/nav_nologin.png)
 
 If the user is not logged in:
-![navbar_login](book_table/static/images/features/nav_login.png)
+![navbar_login](images/features/nav_login.png)
 
 Navbar mobile:
 
-![nav_mobile](book_table/static/images/features/nav_mobile.png)
+![nav_mobile](images/features/nav_mobile.png)
 
-![nav_mobile_display](book_table/static/images/features/nav_mobile_display.png)
+![nav_mobile_display](images/features/nav_mobile_display.png)
 
 The footer, which contains social media icons, is located at the bottom of every webpage. Clicking on these icons will open the corresponding links in a new browser tab.
 
 If the user is not logged in:
-![footer](book_table/static/images/features/footer.png)
+![footer](images/features/footer.png)
 
 ### Main page
 
 The main page is composed of three separate sections, all visually appealing to encourage users to book a table at the restaurant.
 
 Main page landing:
-![main_landing](book_table/static/images/features/main_landing.png)
+![main_landing](images/features/main_landing.png)
 
 Main page carrousel:
-![main_carrousel](book_table/static/images/features/main_carrousel.png)
+![main_carrousel](images/features/main_carrousel.png)
 
 Main page text:
-![main_text](book_table/static/images/features/main_text.png)
+![main_text](images/features/main_text.png)
 
 ### Menu page
 
 The menu page displays all the ingredients and dishes available, clearly indicating which dishes contain allergens, making it easy for those with allergies to know what they can and cannot eat.
 
 Menu page landing:
-![menu_landing](book_table/static/images/features/menu_landing.png)
+![menu_landing](images/features/menu_landing.png)
 
 Menu page made poke:
-![menu_made_poke](book_table/static/images/features/menu_made_poke.png)
+![menu_made_poke](images/features/menu_made_poke.png)
 
 Menu page made your own poke:
-![menu_make_your](book_table/static/images/features/menu_make_your.png)
+![menu_make_your](images/features/menu_make_your.png)
 
 Menu page allergens:
-![menu_allergens](book_table/static/images/features/menu_allergens.png)
+![menu_allergens](images/features/menu_allergens.png)
 
 ### Contact page
 The contact page includes the location, opening hours, and telephone number of the business. Additionally, a cutout of the location on Google maps is provided for easy reference.
 
 Contact page info:
-![contact_info](book_table/static/images/features/contact_info.png)
+![contact_info](images/features/contact_info.png)
 
 Contact page map:
-![contact_map](book_table/static/images/features/contact_map.png)
+![contact_map](images/features/contact_map.png)
 
 Menu page allergens:
-![menu_allergens](book_table/static/images/features/menu_allergens.png)
+![menu_allergens](images/features/menu_allergens.png)
 
 ### Log in / Sign in pages
 
@@ -264,7 +265,7 @@ Sign up:
 * The signup form verifies that both passwords entered match. If the user enters passwords that do not match, an error message will appear to notify them.
 
 Sign up page:
-![signup](book_table/static/images/features/signup.png)
+![signup](images/features/signup.png)
 
 Log in:
 * The login form requires users to enter their username and the password that they used when signing up for the site.
@@ -272,25 +273,22 @@ Log in:
 * If the user enters the wrong credentials, an error message will be displayed to inform them.
 
 Login page:
-![signin](book_table/static/images/features/signin.png)
+![signin](images/features/signin.png)
 
 Logout: 
 * When the user clicks the logout button from the navigation bar, a modal will appear to confirm the action before the user is logged out.
 
 Logout modal:
-![logout](book_table/static/images/features/logout.png)
+![logout](images/features/logout.png)
 
 ### Table booking
 
 * This section includes a form that allows the user to book a table at the restaurant.
 * The user must specify the date and time of the reservation.
-* When a date is chosen, the user will be shown which tables are already booked for that day, so they can select an available table.
 
 Table booking page:
-![book_table](book_table/static/images/features/book_table.png)
+![book_table](images/features/table_booking.png)
 
-Table booking page with reservations:
-![book_table_with_reservations](book_table/static/images/features/book_table_with_reservations.png)
 
 
 ### My bookings sections
@@ -300,10 +298,10 @@ Table booking page with reservations:
 * In case the user has not made any bookings, a button will appear in this section that redirects the user to the booking page.
 
 My bookings with reservations:
-![mybookings](book_table/static/images/features/mybookings.png)
+![mybookings](images/features/mybookings.png)
 
 My bookings with NO reservations:
-![mybookings_none](book_table/static/images/features/mybookings_none.png)
+![mybookings_none](images/features/mybookings_none.png)
 
 
 ### Messages
@@ -314,11 +312,11 @@ Certain actions on the website will trigger messages to appear at the top of the
 * Deleted reservation (green): The reservation has been deleted successfully.
 
 Messages:
-![reservation_success](book_table/static/images/features/reservation_success.png)
+![reservation_success](images/features/reservation_success.png)
 
-![message_error](book_table/static/images/features/message_error.png)
+![message_error](images/features/message_error.png)
 
-![delete_success](book_table/static/images/features/delete_success.png)
+![delete_success](images/features/delete_success.png)
 
 ## Technologies used
 
@@ -335,7 +333,7 @@ Messages:
 * Font awesome
 
 ### Database Management
-* Heroku Postgres
+* ElephantSQL
 
 ### Other tools
 * Git
@@ -352,24 +350,24 @@ Messages:
 The W3C Markup Validator was utilized to conduct a thorough check for errors within the HTML and CSS pages. Only one error was identified in the HTML files, and none in the CSS files. The error was promptly resolved.
 
 Error HTML:
-![HTML](book_table/static/images/features/html_online_check.png)
+![HTML](images/features/html_online_check.png)
 
 CSS no errors:
-![CSS](book_table/static/images/features/css_online_check.png)
+![CSS](images/features/css_online_check.png)
 
 The JavaScript code was checked for errors using JSHint. One error was identified and resolved.
 
 JS errors:
-![js1](book_table/static/images/features/js_check1.png)
+![js1](images/features/js_check1.png)
 
 JS no errors:
-![js2](book_table/static/images/features/js_check2.png)
+![js2](images/features/js_check2.png)
 
 
 GitPod was used to validate the python code and identify any errors. While most errors were resolved, some were left unresolved because resolving them would imply improper syntax. These errors are listed and described below.
 
 Python errors:
-![python](book_table/static/images/features/python_validate.png)
+![python](images/features/python_validate.png)
 
 ### TDD
 
@@ -406,7 +404,7 @@ Carrousel | The links in the carousel are functional and take the user to the co
 Carrousel login | The information displayed in the carousel is dynamic and depends on the user's login status. | PASS
 
 Lightouse:
-![light1](book_table/static/images/lighthouse/light1.png)
+![light1](images/lighthouse/light1.png)
 
 #### Menu page
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -416,7 +414,7 @@ Responsiveness | All elements on the page have been checked to ensure consistent
 Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
 
 Lightouse:
-![light2](book_table/static/images/lighthouse/light2.png)
+![light2](images/lighthouse/light2.png)
 
 #### Contact page
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -426,7 +424,7 @@ Responsiveness | All elements on the page have been checked to ensure consistent
 Accessibility |The accessibility of the page has been checked using Lighthouse.| PASS
 
 Lightouse:
-![light3](book_table/static/images/lighthouse/light3.png)
+![light3](images/lighthouse/light3.png)
 
 #### Sign Up page
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -438,7 +436,7 @@ Register form | Checked the form submits only when all required fields are fille
 Sign in link | Checked the sign-in link redirects to the sign-in page. | PASS
 
 Lightouse:
-![light7](book_table/static/images/lighthouse/light7.png)
+![light7](images/lighthouse/light7.png)
 
 #### Log in page
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -450,7 +448,7 @@ Sign in form | Checked the form submits only when all required fields are filled
 Signup link | Checked the signup link redirects to the signup page. | PASS
 
 Lightouse:
-![light8](book_table/static/images/lighthouse/light8.png)
+![light8](images/lighthouse/light8.png)
 
 #### Book table page
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -462,7 +460,7 @@ Form | Checked the form submits only when all required fields are filled out. | 
 Date picker | When a date is selected, all reservations made for that day are displayed.| PASS
 
 Lightouse:
-![light4](book_table/static/images/lighthouse/light4.png)
+![light4](images/lighthouse/light4.png)
 
 #### My bookings page
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -476,7 +474,7 @@ Delete |When the delete button is clicked, a modal appears to confirm the action
 No reservation |A button linking to the book table page is present and functional.| PASS
 
 Lightouse:
-![light6](book_table/static/images/lighthouse/light6.png)
+![light6](images/lighthouse/light6.png)
 
 #### Edit table page
 TEST            | OUTCOME                          | PASS / FAIL  
@@ -487,9 +485,70 @@ Accessibility |The accessibility of the page has been checked using Lighthouse.|
 Form | Checked the form submits only when all required fields are filled out. | PASS
 
 Lightouse:
-![light5](book_table/static/images/lighthouse/light5.png)
+![light5](images/lighthouse/light5.png)
 
-## Credits
+## 8. Deployement 
+    -  Install Django and Gunicorn. Gunicorn is the server I am using to run Django on Heroku.
+    - Install support libraries including psycopg2, this is used to connect the PostgreSQL database
+    - Install Cloudinary libraries, this is a host provider service that stores images
+    - Create the requirements.txt file. This includes the project's dependencies allowing us to run the project in Heroku.
+
+- Create a new, blank Django Project
+    - Create a new project
+    - Create the app
+    - Add restaurant_booking to the installed apps in settings.py
+    - Migrate all new changes to the database
+    - Run the server to test
+
+- Setup project to use Cloudinary and PostgreSQL
+    - Create new Heroku app
+        - Sign into Heroku
+        - Select New
+        - Select create new app
+        - Enter a relevant app name
+        - Select appropriate region
+        - Select the create app button
+
+    - Prepare the environment and settings.py file
+        - Create env.py file
+        - Add DATABASE_URL with the Postgres URL from Heroku
+        - Add SECRET_KEY with a randomly generated key
+        - Add SECRET_KEY and generated key to the config vars in Heroku
+        - Add if statement to settings.py to prevent the production server from erroring
+        - Replace insecure key with the environment variable for the SECRET_KEY
+        - Migrate changes to new database
+
+    - Create a database in ElephantSQL
+        - Create account and create new instance
+        - Select a plan and an apropiate name
+        - Select a region near the user location
+        - Add DATABASE_URL with the ElephantSql URL 
+
+    - Get static media files stored on Cloudinary
+        - Create a Cloudinary account
+        - From the dashboard, copy the API Environment variable
+        - In the settings.py file create a new environment variable for CLOUDINARY_URL
+        - Add the CLOUDINARY_URL variable to Heroku
+        - Add a temporary config var for DISABLE_COLLECTSTATIC
+        - In settings.py add Cloudinary as an installed app
+        - Add static and media file variables
+        - Add templates directory
+        - Change DIR's key to point to TEMPALTES_DIR
+        - Add Heroku hostname to allowed hosts
+        - Create directories for media, static and templates in the project workspace
+        - Create a Procfile
+
+    
+    - For the final deployment to Heroku, I had to:
+        - Uncomment the PostgreSQL databse from my settings.py file.
+        - Set debug = False in my settings.py file.
+        - Commit and push all files to GitHub
+        - In Heroku, remove the DISABLE_COLLECTSTATIC config var.
+        - In the deploy tab, go to the manual deploy sections and click deploy branch.
+
+
+
+## 9. Credits
 
 * Media: All images are taken from Pexels 
 * Code: Stack Overflow and W3Schools were frequently consulted for inspiration and to improve understanding of the implemented code.
