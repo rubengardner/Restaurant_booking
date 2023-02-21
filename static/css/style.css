@@ -4,7 +4,13 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: rgba(255, 240, 201, 1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+footer {
+    margin-top: auto;
 }
 
 p {
@@ -44,7 +50,7 @@ p {
 /*--------------------Index page--------------*/
 
 .logo {
-    background: url("../media/poke-dark-4.jpg");
+    background: url(https://res.cloudinary.com/ddvquebst/image/upload/v1676904356/static/media/poke-dark-4_jbqpnj.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,7 +62,7 @@ p {
 }
 
 .poke-image {
-    background: url("../media/poke-sauce.jpg");
+    background: url(https://res.cloudinary.com/ddvquebst/image/upload/v1676904365/static/media/poke-sauce_fnrrhe.jpg);
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -90,7 +96,7 @@ p {
 /*--------Menu page-------------*/
 
 .menu-header {
-    background: url("../media/salmon-knife.jpg");
+    background: url(https://res.cloudinary.com/ddvquebst/image/upload/v1676904378/static/media/salmon-knife_b1rqdv.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,7 +121,7 @@ p {
 }
 
 #make-your-poke {
-    background: url("../media/poke-dark.jpg");
+    background: url(https://res.cloudinary.com/ddvquebst/image/upload/v1676904359/static/media/poke-dark_pwj1rf.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
