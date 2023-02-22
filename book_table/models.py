@@ -21,7 +21,7 @@ class Reservation(models.Model):
         User, on_delete=models.CASCADE, related_name='restaurant_booking'
     )
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
-    date = models.DateField(null=False, blank=False)
+    date = models.DateTimeField(null=False, blank=False)
     time = models.CharField(null=True, blank=False, choices=time_services, max_length=25)
 
     class Meta:
