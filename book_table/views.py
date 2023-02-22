@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse, get_list_or_404, \
     get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import Reservation
 from .forms import ReservationForm
 from django.contrib import messages
@@ -18,7 +19,7 @@ def menu_view(request):
 def contact_view(request):
     return render(request, 'contact.html')
 
-
+@login_required
 def add_reservation(request):
 
     if request.method == 'POST':
@@ -41,7 +42,7 @@ def add_reservation(request):
     }
     return render(request, 'table_booking.html', context)
 
-
+@login_required
 def mybooking_view(request):
     try:
         reservations = get_list_or_404(Reservation, client=request.user)
@@ -54,7 +55,7 @@ def mybooking_view(request):
     }
     return render(request, 'mybooking.html', context)
 
-
+@login_required
 def edit_booking(request, reservation_id):
 
 
@@ -74,7 +75,7 @@ def edit_booking(request, reservation_id):
     }
     return render(request, 'edit_booking.html', context)
 
-
+@login_required
 def delete_booking(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id)
     reservation.delete()
