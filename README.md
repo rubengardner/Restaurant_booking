@@ -1,5 +1,5 @@
 
-![Multiple screens](/images/backlog/multiple-screens.png)
+![Multiple screens](/images/features/multiple-screens.png)
 
 A restaurant booking system is a software application designed to streamline the process of making reservations at a restaurant. It provides a convenient platform for customers to browse available tables, select a desired time and date, and make a reservation with just a few clicks. The system can also help restaurants manage their reservations more efficiently, allowing them to optimize their seating capacity, reduce wait times, and improve overall customer experience. With the increasing popularity of online booking, a restaurant booking system has become an essential tool for restaurants of all sizes, from small local eateries to large chains and franchises. In this digital age, a restaurant booking system offers a competitive advantage by providing a seamless, user-friendly experience for customers and streamlining operations for restaurant staff.
 
