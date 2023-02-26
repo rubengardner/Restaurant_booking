@@ -555,8 +555,7 @@ Lightouse:
 
 
 ## Known bugs
-- Cloudinary was utilized to deploy both the CSS file and the images. 
-- Since the conventional method of using href="{% static 'css/style.css' %}" to load the CSS was not functional, a direct link to the CSS file was supplied. The same approach was taken for the media images.
+- None
 
 ## Credits
 * Media: All images are taken from Pexels 
