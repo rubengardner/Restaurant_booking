@@ -1,22 +1,27 @@
+
+![Multiple screens](/images/backlog/multiple-screens.png)
+
+A restaurant booking system is a software application designed to streamline the process of making reservations at a restaurant. It provides a convenient platform for customers to browse available tables, select a desired time and date, and make a reservation with just a few clicks. The system can also help restaurants manage their reservations more efficiently, allowing them to optimize their seating capacity, reduce wait times, and improve overall customer experience. With the increasing popularity of online booking, a restaurant booking system has become an essential tool for restaurants of all sizes, from small local eateries to large chains and franchises. In this digital age, a restaurant booking system offers a competitive advantage by providing a seamless, user-friendly experience for customers and streamlining operations for restaurant staff.
+
 # Table of Contents
 
--   [1. UX](#ux)
-    -   [1.1. Strategy](#strategy)  DONE
-        -   [Project Goals](#project-goals) DONE
-            -   [User Goals:](#user-goals) DONE
-            -   [User stories](#tuser-stories) DONE
-            -   [Strategy Table](#strategy-table) DONE
--   [2. Wireframes](#wireframes) DONE
--   [3. Surface](#surface) DONE
--   [4. Database](#database) DONE
--   [5. Features](#features) DONE
--   [6. Technologies Used](#technologies-used) DONE, check for deployement
+-   [1. UX](#user-experience)
+    -   [1.1. Strategy](#strategy)
+        -   [Project Goals](#project-goals) 
+            -   [User Goals:](#user-goals) 
+            -   [User stories](#user-stories)
+            -   [Strategy Table](#strategy-table) 
+-   [2. Wireframes](#wireframes)
+-   [3. Surface](#surface) 
+-   [4. Database](#database)
+-   [5. Features](#features) 
+-   [6. Technologies Used](#technologies-used)
 -   [7. Testing](#testing)
 -   [8. Deployment](#deployment)
 -   [9. Known Bugs](#known-bugs)
 -   [10. Credits](#credits)
 
-# 1 User experience
+# User experience
 
 ## 1.1. Strategy
 
@@ -48,16 +53,16 @@ All customers:
 I utilized the GitHub projects board as my project management tool throughout the project by logging all user stories. This helped me to stay on track by moving the necessary tasks to the "in progress" lane as I worked on them and then moving them to the "done" lane once completed.
 
 Backlog 1:
-![backlog_1](book_table/static/images/backlog/backlog_1.png)
+![backlog_1](/images/backlog/backlog_1.png)
 
 Backlog 2:
-![backlog_2](book_table/static/images/backlog/backlog_2.png)
+![backlog_2](/images/backlog/backlog_2.png)
 
 Backlog 3:
-![backlog_3](book_table/static/images/backlog/backlog_3.png)
+![backlog_3](/images/backlog/backlog_3.png)
 
 Backlog 4:
-![backlog_4](book_table/static/images/backlog/backlog_4.png)
+![backlog_4](/images/backlog/backlog_4.png)
 
 
 ### Strategy Table
@@ -165,6 +170,7 @@ Database model:
 
 The final database structure is:
 ```python
+
 class Table(models.Model):
     number_of_seats = models.IntegerField(null=False, blank=False)
 
@@ -174,14 +180,16 @@ class Table(models.Model):
 
 class Reservation(models.Model):
     time_services = [
-        (datetime.time(13, 0, 0), "13:00"),
-        (datetime.time(15, 0, 0), '15:00'),
-        (datetime.time(20, 0, 0), '20:00'),
-        (datetime.time(22, 0, 0), '22:00')]
-    client = models.ForeignKey(User, on_delete=models.CASCADE, related_name='restaurant_booking')
+        ("13:00", "13:00"),
+        ("15:00", '15:00'),
+        ("20:00", '20:00'),
+        ("22:00", '22:00')]
+    client = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='restaurant_booking'
+    )
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
-    date = models.DateField(null=False, blank=False)
-    time = models.TimeField(null=False, blank=False, choices=time_services)
+    date = models.DateTimeField(null=False, blank=False)
+    time = models.CharField(null=True, blank=False, choices=time_services, max_length=25)
 
     class Meta:
         unique_together = ["table", "date", "time"]
@@ -487,7 +495,7 @@ Form | Checked the form submits only when all required fields are filled out. | 
 Lightouse:
 ![light5](images/lighthouse/light5.png)
 
-## 8. Deployement 
+## Deployment 
     -  Install Django and Gunicorn. Gunicorn is the server I am using to run Django on Heroku.
     - Install support libraries including psycopg2, this is used to connect the PostgreSQL database
     - Install Cloudinary libraries, this is a host provider service that stores images
@@ -540,15 +548,16 @@ Lightouse:
 
     
     - For the final deployment to Heroku, I had to:
-        - Uncomment the PostgreSQL databse from my settings.py file.
-        - Set debug = False in my settings.py file.
+        - Set debug = False in the settings.py file.
         - Commit and push all files to GitHub
         - In Heroku, remove the DISABLE_COLLECTSTATIC config var.
         - In the deploy tab, go to the manual deploy sections and click deploy branch.
 
 
+## Known bugs
+- Cloudinary was utilized to deploy both the CSS file and the images. 
+- Since the conventional method of using href="{% static 'css/style.css' %}" to load the CSS was not functional, a direct link to the CSS file was supplied. The same approach was taken for the media images.
 
-## 9. Credits
-
+## Credits
 * Media: All images are taken from Pexels 
 * Code: Stack Overflow and W3Schools were frequently consulted for inspiration and to improve understanding of the implemented code.
